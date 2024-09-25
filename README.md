@@ -9,8 +9,8 @@ Sections
     Blog: Articles and thoughts on technology, business analytics, and finance.
     Contact: Get in touch with me via email, LinkedIn, or GitHub.
 
-Live Site
+### Live Site ###
 
-You can view the live version of the website here: [Your Website Link Here].
+You can view the live version of the website here: https://www.eshaanarora.com/
 
 Feel free to explore the different sections and get to know more about my work!
