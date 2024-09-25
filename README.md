@@ -1,5 +1,4 @@
-Here's a quick intro you can use for your README.md file:
-Eshaan Arora's Personal Website
+## Eshaan Arora's Personal Website ## 
 
 Welcome to the repository for my personal website! This site showcases my professional experience, portfolio, blog, and contact information.
 Sections
