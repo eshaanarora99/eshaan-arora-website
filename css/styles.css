@@ -9,9 +9,14 @@ body {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* optional for rounded corners */
+    width: 150px; /* Set a fixed width for the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional for rounded corners */
+
+    /* Positioning */
+    position: absolute;
+    top: 20px;   /* Distance from the top of the page */
+    right: 20px; /* Distance from the right side of the page */
 }
 
 header {
