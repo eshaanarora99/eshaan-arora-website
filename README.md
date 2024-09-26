@@ -14,3 +14,5 @@ Sections
 You can view the live version of the website here: https://www.eshaanarora.com/
 
 Feel free to explore the different sections and get to know more about my work!
+
+** Proudly hosted on Vercel **
