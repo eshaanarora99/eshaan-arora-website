@@ -8,6 +8,12 @@ body {
     color: #333;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* optional for rounded corners */
+}
+
 header {
     background-color: #2c3e50;
     color: white;
