@@ -14,9 +14,10 @@ img {
     border-radius: 10px; /* Optional for rounded corners */
 
     /* Positioning */
-    position: absolute;
+    position: fixed;
     top: 20px;   /* Distance from the top of the page */
     right: 20px; /* Distance from the right side of the page */
+    z-index: 1000;
 }
 
 header {
