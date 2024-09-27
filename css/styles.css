@@ -40,6 +40,14 @@ nav a {
     font-weight: bold;
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Optional: adds some space above the video */
+}
+
+
 nav a:hover {
     background-color: #333;
 }
