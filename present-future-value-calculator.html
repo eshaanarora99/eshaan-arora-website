@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Value or Future Value Calculator - Eshaan Arora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        h2 {
+            text-align: center; /* Center the heading */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Present Value or Future Value Calculator</h1>
+    </header>
+
+    <div class="container">
+        <h2>Code for Present Value or Future Value Calculator</h2>
+        <pre><code class="language-python">
+def get_initial_value():
+    while True:
+        value = input("Please enter the value to calculate PV/FV for: ")
+        try:
+            return float(value)
+        except ValueError:
+            print("Please enter a valid number!")
+
+def get_pfVal():
+    pfVal = input("Hello! Would you like to calculate Present Value or Future Value? Enter 0 for PV and 1 for FV: ")
+    
+    if pfVal == '0' or pfVal == '1':
+        return pfVal
+    else:
+        print("Sorry, please enter 0 or 1!")
+        return get_pfVal()
+    
+def get_periods():
+    periods = input("How many discrete periods are there? Response: ")
+    try:
+        periods = int(periods)
+        return periods
+    except ValueError:
+        print("Sorry, please enter a valid integer! Try again.")
+        return get_periods()
+    
+def get_phases():
+    phases = input("Enter the number of discrete growth phases (including 'none'): ").lower()
+     
+    if phases == "none":
+        return 0
+    
+    else:
+        try:
+            phases = int(phases)
+            if phases >= 0:
+                return phases
+            else:
+                print("Sorry, please enter a non-negative integer or the word 'none'.")
+                return get_phases()
+            
+        except ValueError:
+            print("Sorry, please enter a valid integer or the word 'none'.")
+            return get_phases()
+    
+def phaseData(phaseCount):
+    phaseGrowth = []
+    for i in range(phaseCount):
+        growthRate = input("Input the growth rate for phase " + str(i+1) + " as a percentage (i.e., enter '6' for a rate of 6%): ")
+        try:
+            growthRate = float(growthRate)
+        except ValueError:
+            print("Please enter a valid number for the growth rate.")
+            return phaseData(phaseCount)
+        
+        length = input("Enter the length of phase " + str(i + 1) + " in periods: ")
+        try:
+            length = int(length)
+        except ValueError:
+            print("Please enter a valid integer for the length of the phase.")
+            return phaseData(phaseCount)
+        
+        if i == phaseCount - 1:
+            ap = input("For the final phase of this problem, is it an annuity or perpetuity? Enter 'A' for annuity or 'P' for perpetuity: ").upper()
+            if ap not in ["A", "P"]:
+                print("Please enter 'A' for annuity or 'P' for perpetuity.")
+                return phaseData(phaseCount)
+            
+            phaseGrowth.append({
+                'growthRate': growthRate,
+                'length': length,
+                'type': ap
+            })
+        else:
+            phaseGrowth.append({
+                'growthRate': growthRate,
+                'length': length,
+                'type' : 'A'
+            })
+    
+    return phaseGrowth
+
+def get_rate():
+    rate = input("Please enter the discount rate percentage value (i.e., enter '6' for a rate of 6%): ")
+    try:
+        rate = float(rate)
+        return rate
+    except ValueError:
+        print("Please enter a VALID discount rate!")
+        return get_rate()
+    
+def presentValue(fv, rate, periods):
+    return fv / ((1 + rate/100) ** periods)
+
+def futureValue(pv, rate, periods):
+    return pv * ((1 + rate/100) ** periods)
+
+def annuityPV(cashFlow, rate, periods):
+    return cashFlow * ((1 - (1 + rate/100) ** -periods) / (rate/100))
+
+def perpetuityPV(cashFlow, rate):
+    return cashFlow / (rate/100)
+    
+
+def main():
+    pfVal = get_pfVal()
+
+    if pfVal == '0':
+        print("You are calculating Present Value.")
+    else:
+        print("You are calculating Future Value.")
+
+    initialValue = get_initial_value()
+    print("You entered an initial value of ", initialValue, ".")
+
+    periods = get_periods()
+    print("You entered", periods, "discrete forecast periods.")
+
+    phases = get_phases()
+    print("You entered", phases, "distinct growth period(s)")
+
+    if phases > 0:
+        growthPhases = phaseData(phases)
+        phaseNumber = 1
+        for phase in growthPhases:
+            if 'type' in phase:
+                print("Phase: " + str(phaseNumber) + " Growth: " + str(phase['growthRate']) + "% Length: " + str(phase['length']) + " Type: " + str(phase['type']))
+            else:
+                print("Phase: " + str(phaseNumber) + " Growth: " + str(phase['growthRate']) + "% Length: " + str(phase['length']))
+            phaseNumber += 1
+    else:
+        print("No growth phases entered.")
+
+    rate = get_rate()
+    print("You entered a discount rate of", rate, "%.")
+
+    totalPV = 0
+    totalFV = 0
+
+    if phases == 0:
+        if pfVal =='0':
+            totalPV = presentValue(initialValue, rate, periods)
+            print("Total PV = $", round(totalPV, 2))
+        else:
+            totalFV = futureValue(initialValue, rate, periods)
+            print("Total FV = $", round(totalFV, 2))
+
+    else:
+
+        i = 0
+        for phase in growthPhases:
+            if 'type' in phase and phase['type'] == 'A':
+                phasePV = annuityPV(initialValue, phase['growthRate'], phase['length'])
+            else:
+                phasePV = perpetuityPV(initialValue, phase['growthRate'])
+
+
+            tempPV = presentValue(phasePV, rate, i * periods)
+            tempFV = futureValue(phasePV, rate, i * periods)
+
+            totalPV += tempPV
+            totalFV += tempFV
+
+            initialValue = tempPV if pfVal == '0' else tempFV
+
+            i += 1
+
+        if pfVal == '0':
+            print("Total PV = $", round(totalPV, 2))
+
+        else:
+            print("Total FV = $", round(totalFV,2))
+            
+if __name__=="__main__": 
+    main() 
+        </code></pre>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Eshaan Arora</p>
+    </footer>
+
+    <!-- Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
