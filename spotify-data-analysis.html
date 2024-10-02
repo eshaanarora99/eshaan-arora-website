@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Spotify Analysis Program - Eshaan Arora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Comprehensive Spotify Analysis Program</h1>
+    </header>
+
+    <div class="container">
+        <h2>Instructions and Code</h2>
+        <pre><code class="language-python">
+import os
+import json
+import pandas as pd
+import matplotlib.pyplot as plt
+import geoip2.database
+import folium
+from folium.plugins import MarkerCluster
+from glob import glob
+
+# Function to load and combine all JSON files
+def load_spotify_data(data_directory):
+    json_files = glob(os.path.join(data_directory, '*.json'))
+    all_data = []
+
+    for file in json_files:
+        try:
+            with open(file, 'r', encoding='utf-8', errors='ignore') as f:
+                data = json.load(f)
+                all_data.extend(data)
+        except UnicodeDecodeError as e:
+            print(f"Error reading {file}: {e}")
+
+    return all_data
+
+# Function to convert JSON data to pandas DataFrame
+def json_to_dataframe(data):
+    return pd.DataFrame(data)
+
+# Function to show basic statistics of your listening history
+def basic_statistics(df):
+    total_streams = len(df)
+    total_time_ms = df['ms_played'].sum()
+    total_time_minutes = total_time_ms / (1000 * 60)  # Convert to minutes
+    most_played_track = df.groupby('master_metadata_track_name')['ms_played'].sum().idxmax()
+    most_played_artist = df.groupby('master_metadata_album_artist_name')['ms_played'].sum().idxmax()
+    platform_usage = df['platform'].value_counts()
+
+    print(f"Total streams: {total_streams}")
+    print(f"Total time played (minutes): {total_time_minutes:.2f}")
+    print(f"Most played track: {most_played_track}")
+    print(f"Most played artist: {most_played_artist}")
+    print("\nPlatform usage:\n", platform_usage)
+
+# Function to plot streaming activity over time on a monthly basis (in minutes)
+def plot_streaming_by_month(df):
+    df['ts'] = pd.to_datetime(df['ts'], errors='coerce')
+    df = df.sort_values(by='ts')
+    df_grouped = df.groupby(pd.Grouper(key='ts', freq='M'))['ms_played'].sum() / (1000 * 60)  # Convert to minutes
+    df_grouped = df_grouped.asfreq('M', fill_value=0)
+
+    plt.figure(figsize=(10, 6))
+    df_grouped.plot(kind='line')
+    plt.title('Streaming Activity Over Time (Monthly Basis, Minutes Played)')
+    plt.xlabel('Month')
+    plt.ylabel('Total Minutes Played')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+
+# Function to plot top N most played artists (in minutes)
+def plot_top_artists_in_minutes(df, n=10):
+    top_artists = df.groupby('master_metadata_album_artist_name')['ms_played'].sum().sort_values(ascending=False).head(n) / (1000 * 60)
+    plt.figure(figsize=(10, 6))
+    top_artists.plot(kind='bar')
+    plt.title(f'Top {n} Most Played Artists (Minutes Played)')
+    plt.xlabel('Artist')
+    plt.ylabel('Total Minutes Played')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.show()
+
+# Function to plot top N most played tracks (in minutes)
+def plot_top_tracks_in_minutes(df, n=10):
+    top_tracks = df.groupby('master_metadata_track_name')['ms_played'].sum().sort_values(ascending=False).head(n) / (1000 * 60)
+    plt.figure(figsize=(10, 6))
+    top_tracks.plot(kind='bar')
+    plt.title(f'Top {n} Most Played Tracks (Minutes Played)')
+    plt.xlabel('Track')
+    plt.ylabel('Total Minutes Played')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.show()
+
+# Load GeoLite2 database
+def load_geoip_database(db_path):
+    return geoip2.database.Reader(db_path)
+
+# Function to geolocate IP addresses
+def geolocate_ips(df, geoip_reader):
+    location_data = []
+    
+    for ip in df['ip_addr_decrypted']:
+        try:
+            response = geoip_reader.city(ip)
+            location_data.append({
+                'ip': ip,
+                'country': response.country.name,
+                'city': response.city.name,
+                'latitude': response.location.latitude,
+                'longitude': response.location.longitude
+            })
+        except Exception as e:
+            location_data.append({
+                'ip': ip,
+                'country': None,
+                'city': None,
+                'latitude': None,
+                'longitude': None
+            })
+    
+    return pd.DataFrame(location_data)
+
+# Function to create both a full map and a clustered map without point limitation
+def create_full_and_clustered_maps(df, map_width=800, map_height=600, zoom_start=2):
+    # Full Map - Display all points without clustering
+    full_map = folium.Map(location=[20, 0], zoom_start=zoom_start, width=map_width, height=map_height)
+
+    for _, row in df.iterrows():
+        if not pd.isnull(row['latitude']) and not pd.isnull(row['longitude']):
+            folium.Marker(
+                location=[row['latitude'], row['longitude']],
+                popup=f"City: {row['city']}, Country: {row['country']}"
+            ).add_to(full_map)
+
+    # Save the full map
+    full_map.save("spotify_streams_full_map.html")
+    print(f"Full map saved as spotify_streams_full_map.html")
+
+    # Clustered Map - Use marker clustering
+    clustered_map = folium.Map(location=[20, 0], zoom_start=zoom_start, width=map_width, height=map_height)
+    marker_cluster = MarkerCluster().add_to(clustered_map)
+
+    for _, row in df.iterrows():
+        if not pd.isnull(row['latitude']) and not pd.isnull(row['longitude']):
+            folium.Marker(
+                location=[row['latitude'], row['longitude']],
+                popup=f"City: {row['city']}, Country: {row['country']}"
+            ).add_to(marker_cluster)
+
+    # Save the clustered map
+    clustered_map.save("spotify_streams_clustered_map.html")
+    print(f"Clustered map saved as spotify_streams_clustered_map.html")
+
+# Main execution
+if __name__ == "__main__":
+    # Directory containing your Spotify JSON files
+    data_directory = r'C:\Users\eshaa\Downloads\Spotify Extended Streaming History'  # Adjust this path
+    
+    # Path to the GeoLite2 database
+    geoip_db_path = r'C:\Users\eshaa\Downloads\GeoLite2-City_20241001\GeoLite2-City_20241001\GeoLite2-City.mmdb'  # Adjust this path
+
+    # Load and process the data
+    spotify_data = load_spotify_data(data_directory)
+    if spotify_data:
+        spotify_df = json_to_dataframe(spotify_data)
+
+        # Show basic statistics
+        print("\n--- Basic Statistics ---")
+        basic_statistics(spotify_df)
+
+        # Plot monthly streaming activity
+        print("\n--- Streaming Activity Over Time ---")
+        plot_streaming_by_month(spotify_df)
+
+        # Plot top artists and tracks
+        print("\n--- Top 10 Most Played Artists ---")
+        plot_top_artists_in_minutes(spotify_df, n=10)
+        
+        print("\n--- Top 10 Most Played Tracks ---")
+        plot_top_tracks_in_minutes(spotify_df, n=10)
+
+        # Load GeoLite2 database for IP geolocation
+        geoip_reader = load_geoip_database(geoip_db_path)
+        
+        # Geolocate IP addresses
+        location_df = geolocate_ips(spotify_df, geoip_reader)
+        print(location_df.head())  # Show geolocated IPs
+
+        # Generate both full map and clustered map without point limitation
+        create_full_and_clustered_maps(location_df, map_width=600, map_height=400, zoom_start=2)
+    else:
+        print("No data found or could not load data.")
+        </code></pre>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Eshaan Arora</p>
+    </footer>
+
+    <!-- Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs
