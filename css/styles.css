@@ -1,0 +1,173 @@
+/* Color Palette */
+:root {
+    --raisin-black: #1a1423ff;
+    --english-violet: #3d314aff;
+    --eggplant: #684756ff;
+    --chamoisee: #96705bff;
+    --beaver: #ab8476ff;
+}
+
+/* Shared Stylesheet for all pages */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: var(--raisin-black);
+    color: var(--beaver);
+    font-size: 16px;
+}
+
+img {
+    width: 150px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease; /* Subtle hover effect */
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Header styling */
+header {
+    background-color: var(--english-violet);
+    color: var(--beaver);
+    padding: 15px;
+    text-align: center;
+    background: var(--gradient-top); /* Gradient background */
+}
+
+/* Navigation styling */
+nav {
+    background-color: var(--eggplant);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--chamoisee);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--beaver);
+    color: var(--raisin-black);
+}
+
+/* Main container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--beaver);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+/* Resume and portfolio section styling */
+.resume-section, .portfolio-section {
+    background-color: var(--chamoisee);
+    color: var(--raisin-black);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.resume-section:hover, .portfolio-section:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Video container styling */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--eggplant);
+    color: var(--beaver);
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 50px;
+    background: var(--gradient-bottom-left);
+}
+
+/* Button styling */
+button {
+    background-color: var(--eggplant);
+    color: var(--beaver);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--beaver);
+    color: var(--raisin-black);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .resume-section, .portfolio-section {
+        padding: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
