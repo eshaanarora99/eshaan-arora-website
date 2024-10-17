@@ -3,20 +3,33 @@
     <head>
         <title>Financial Market Dashboard</title>
         <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+            }
             table {
-                width: 80%;
+                width: 90%;
+                max-width: 1000px;
+                margin: 20px auto;
                 border-collapse: collapse;
-                margin: 25px 0;
-                font-size: 18px;
-                text-align: left;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                background-color: white;
             }
             th, td {
-                padding: 12px;
+                padding: 12px 20px;
                 border: 1px solid #ddd;
                 text-align: center;
             }
             th {
-                background-color: #f2f2f2;
+                background-color: #4CAF50;
+                color: white;
             }
             tr:nth-child(even) {
                 background-color: #f9f9f9;
@@ -24,10 +37,24 @@
             tr:hover {
                 background-color: #f1f1f1;
             }
+            .disclaimer {
+                margin: 20px auto;
+                text-align: center;
+                font-size: 14px;
+                color: #888;
+            }
+            @media screen and (max-width: 600px) {
+                table {
+                    font-size: 12px;
+                }
+                th, td {
+                    padding: 8px;
+                }
+            }
         </style>
     </head>
     <body>
-        <h1>Financial Market Dashboard (Scraped on 2024-10-16 19:46:22)</h1>
+        <h1>Financial Market Dashboard</h1>
         <table>
             <tr>
                 <th>Market</th>
@@ -36,9 +63,6 @@
                 <th>Change</th>
                 <th>Percent Change</th>
             </tr>
-
-    <h3>This table is intended to provide general market information for students in FIN 684F, taught by Prof. Michael Sury at the University of Texas at Austin. Please do not use the data shown here to make investment decisions!</h3> 
-
     
         <tr>
             <td>Dow Jones Industrial Average</td>
@@ -67,33 +91,33 @@
         <tr>
             <td>Volatility Index (VIX)</td>
             <td>19.58</td>
-            <td>20.64</td>
-            <td>-1.06</td>
-            <td>(-5.14%)</td>
+            <td>19.58</td>
+            <td>0.00</td>
+            <td>(0.00%)</td>
         </tr>
         
         <tr>
             <td>Gold Futures</td>
-            <td>2,692.50</td>
+            <td>2,697.80</td>
             <td>2,691.30</td>
-            <td>+1.20</td>
-            <td>(+0.04%)</td>
+            <td>+6.50</td>
+            <td>(+0.24%)</td>
         </tr>
         
         <tr>
             <td>WTI Crude Oil Futures</td>
-            <td>70.83</td>
+            <td>70.31</td>
             <td>70.39</td>
-            <td>+0.44</td>
-            <td>(+0.63%)</td>
+            <td>-0.08</td>
+            <td>(-0.11%)</td>
         </tr>
         
         <tr>
             <td>Bitcoin (BTC) to USD</td>
-            <td>67,871.58</td>
-            <td>66,979.34</td>
-            <td>+892.24</td>
-            <td>(+1.33%)</td>
+            <td>67,116.11</td>
+            <td>67,013.39</td>
+            <td>+102.72</td>
+            <td>(+0.15%)</td>
         </tr>
         
         <tr>
@@ -105,6 +129,9 @@
         </tr>
         
         </table>
+        <div class="disclaimer">
+            <p>This table is intended to provide general market information for students in FIN 684F, taught by Prof. Michael Sury at the University of Texas at Austin. Please do not use the data shown here to make investment decisions!</p>
+        </div>
     </body>
     </html>
     
