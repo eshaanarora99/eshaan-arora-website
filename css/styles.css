@@ -61,11 +61,6 @@ nav a:hover {
     background-color: var(--footer-bg);
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 h1, h2, h3 {
     color: var(--dark-bg);
@@ -104,9 +99,6 @@ footer {
         padding: 15px;
     }
 
-    .container {
-        padding: 10px;
-    }
 }
 
 .substack-container {
