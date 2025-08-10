@@ -71,6 +71,10 @@ h1, h2, h3 {
     color: var(--dark-bg);
 }
 
+header h1 {
+    color: var(--light-text);
+}
+
 p {
     margin: 0 0 15px;
 }
