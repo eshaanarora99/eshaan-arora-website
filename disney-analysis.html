@@ -1,11 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Disney DCF Valuation - Eshaan Arora</title>
   <link rel="stylesheet" href="styles.css"> <!-- your existing stylesheet -->
+
+  <!-- Page-scoped styles (safe to move into styles.css) -->
+  <style>
+    :root{
+      --bg: #fafafa;
+      --card: #ffffff;
+      --ink: #1f2937;            /* slate-800 */
+      --muted: #6b7280;          /* slate-500 */
+      --border: #e5e7eb;         /* gray-200 */
+      --brand: #1f4ed8;          /* indigo-700 */
+      --brand-2: #0ea5e9;        /* cyan-500 */
+      --brand-hover: #1639a6;
+      --shadow: 0 8px 22px rgba(0,0,0,.06);
+      --radius: 14px;
+      --radius-sm: 10px;
+      --container: 1000px;
+    }
+
+    body {
+      font-family: system-ui,-apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+
+    header {
+      text-align: center;
+      padding: 38px 16px 22px;
+      background: linear-gradient(180deg, #fff, #f7fafc00);
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+      letter-spacing: .2px;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    /* Section headings */
+    h2 {
+      margin: 10px 0 16px;
+      text-align: left;
+      font-size: 1.15rem;
+      letter-spacing: .2px;
+    }
+
+    /* Valuation summary grid */
+    .valuation-summary { margin-top: 6px; }
+    .summary-box {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+    @media (max-width: 860px){
+      .summary-box { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-weight: 600;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .card p {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .card small {
+      display: inline-block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    /* Links section */
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 32px;
+    }
+    .links a {
+      text-decoration: none;
+      color: #fff;
+      background: var(--brand);
+      border: 1px solid var(--brand);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-size: .95rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .2s ease, transform .04s ease;
+    }
+    .links a:hover { background: var(--brand-hover); }
+    .links a:active { transform: translateY(1px); }
+    .links a.secondary {
+      background: transparent;
+      color: var(--brand);
+      border-color: var(--brand);
+    }
+    .links a.secondary:hover {
+      background: rgba(31,78,216,.06);
+    }
+
+    /* Visuals / iframe */
+    .visuals p { color: var(--muted); }
+    .embed-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+    .embed-wrap iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+
+    /* Table */
+    .sensitivity table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .sensitivity thead th {
+      background: #f8fafc;
+      color: #0f172a;
+      text-align: left;
+      padding: 12px 14px;
+      font-size: .9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .sensitivity tbody td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      font-size: .95rem;
+    }
+    .sensitivity tbody tr:nth-child(even) td {
+      background: #fcfcfc;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 22px 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+      background: #fff;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>The Walt Disney Company (DIS) – Intrinsic Valuation</h1>
@@ -13,6 +194,7 @@
   </header>
 
   <main class="container">
+    <!-- SUMMARY -->
     <section class="valuation-summary">
       <h2>Valuation Summary</h2>
       <div class="summary-box">
@@ -23,35 +205,43 @@
         <div class="card">
           <h3>Market Price</h3>
           <p>$118.86</p>
-          <small>~135% premium</small>
+          <small>~135% premium to model value</small>
         </div>
         <div class="card">
           <h3>Cost of Capital</h3>
           <p>10.3% → 8.7%</p>
+          <small>Initial WACC to terminal WACC</small>
         </div>
       </div>
     </section>
 
-    <section class="links">
-      <a href="report.pdf" target="_blank">View Full Report (PDF)</a>
-      <a href="DIS-fcffsimpleginzu.xlsx" target="_blank">Download DCF Model (Excel)</a>
+    <!-- LINKS -->
+    <section class="links" aria-label="Downloads">
+      <a href="documents/DIS-Memo.pdf" target="_blank" rel="noreferrer">📄 View Full Report (PDF)</a>
+      <a href="documents/dis_fcffsimpleginzu.xlsx" target="_blank" rel="noreferrer" class="secondary">📊 Download DCF Model (Excel)</a>
     </section>
 
+    <!-- VISUALS -->
     <section class="visuals">
       <h2>Visual Exhibits</h2>
-      <p>Below are sample placeholders for charts. These can later be replaced with Tableau/Looker embeds.</p>
-      <iframe src="https://public.tableau.com/views/YourDashboard" 
-              title="Disney DCF Dashboard"></iframe>
+      <p>Below is a placeholder region for dashboards. Replace the embed link with Tableau/Looker Studio when ready.</p>
+      <div class="embed-wrap" role="group" aria-label="Embedded dashboard">
+        <iframe
+          src="https://public.tableau.com/views/YourDashboard"
+          title="Disney DCF Dashboard (embed placeholder)">
+        </iframe>
+      </div>
     </section>
 
+    <!-- SENSITIVITY -->
     <section class="sensitivity">
       <h2>Sensitivity Snapshot</h2>
       <table>
         <thead>
           <tr>
             <th>WACC</th>
-            <th>Value / Share ($)</th>
-            <th>% of Market Price</th>
+            <th>Value / Share (USD)</th>
+            <th>Value as % of $118.86</th>
           </tr>
         </thead>
         <tbody>
