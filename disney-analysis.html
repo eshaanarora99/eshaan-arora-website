@@ -15,7 +15,6 @@
       --muted: #6b7280;          /* slate-500 */
       --border: #e5e7eb;         /* gray-200 */
       --brand: #1f4ed8;          /* indigo-700 */
-      --brand-2: #0ea5e9;        /* cyan-500 */
       --brand-hover: #1639a6;
       --shadow: 0 8px 22px rgba(0,0,0,.06);
       --radius: 14px;
@@ -127,26 +126,37 @@
       color: var(--brand);
       border-color: var(--brand);
     }
-    .links a.secondary:hover {
-      background: rgba(31,78,216,.06);
-    }
+    .links a.secondary:hover { background: rgba(31,78,216,.06); }
 
-    /* Visuals / iframe */
-    .visuals p { color: var(--muted); }
-    .embed-wrap {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      background: #fff;
+    /* Visual gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
     }
-    .embed-wrap iframe {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      border: 0;
+    @media (min-width: 900px){
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .gallery .wide { grid-column: 1 / -1; }
+    }
+    figure {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      padding: 10px 14px 12px;
+      font-size: .9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: #fff;
     }
 
     /* Table */
@@ -172,9 +182,7 @@
       border-bottom: 1px solid var(--border);
       font-size: .95rem;
     }
-    .sensitivity tbody tr:nth-child(even) td {
-      background: #fcfcfc;
-    }
+    .sensitivity tbody tr:nth-child(even) td { background: #fcfcfc; }
 
     footer {
       border-top: 1px solid var(--border);
@@ -224,18 +232,32 @@
     <!-- VISUALS -->
     <section class="visuals">
       <h2>Visual Exhibits</h2>
-      <p>Below is a placeholder region for dashboards. Replace the embed link with Tableau/Looker Studio when ready.</p>
-      <div class="embed-wrap" role="group" aria-label="Embedded dashboard">
-        <iframe
-          src="https://public.tableau.com/views/YourDashboard"
-          title="Disney DCF Dashboard (embed placeholder)">
-        </iframe>
+      <div class="gallery">
+        <figure class="wide">
+          <img src="images/DIS_EV_to_Equity_Bridge.png" alt="Valuation bridge from enterprise value to equity value" loading="lazy">
+          <figcaption>Valuation Bridge — PV of explicit period and terminal value to Enterprise Value, then to Equity after debt, minority interests, cash, and options.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/DIS_FCFF_Projection.png" alt="Ten-year free cash flow to firm forecast" loading="lazy">
+          <figcaption>FCFF Forecast (Years 1–10) — cash generation trajectory used in the DCF.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/DIS_PV_Composition.png" alt="Present value composition of explicit cash flows versus terminal value" loading="lazy">
+          <figcaption>PV Composition — share of value from explicit cash flows versus terminal value.</figcaption>
+        </figure>
+
+        <figure class="wide">
+          <img src="images/DIS_Sensitivity_WACC.png" alt="Sensitivity of intrinsic value to WACC assumption" loading="lazy">
+          <figcaption>Sensitivity — intrinsic value as a percentage of the $118.86 market price across different WACC assumptions.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- SENSITIVITY -->
+    <!-- SENSITIVITY TABLE (kept for quick reference) -->
     <section class="sensitivity">
-      <h2>Sensitivity Snapshot</h2>
+      <h2>Sensitivity Snapshot (Table)</h2>
       <table>
         <thead>
           <tr>
