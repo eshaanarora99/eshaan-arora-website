@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney DCF Valuation - Eshaan Arora</title>
+  <link rel="stylesheet" href="styles.css"> <!-- your existing stylesheet -->
+</head>
+<body>
+  <header>
+    <h1>The Walt Disney Company (DIS) – Intrinsic Valuation</h1>
+    <p>DCF Analysis and Investor Report – As of August 2025</p>
+  </header>
+
+  <main class="container">
+    <section class="valuation-summary">
+      <h2>Valuation Summary</h2>
+      <div class="summary-box">
+        <div class="card">
+          <h3>Intrinsic Value / Share</h3>
+          <p>$50.55</p>
+        </div>
+        <div class="card">
+          <h3>Market Price</h3>
+          <p>$118.86</p>
+          <small>~135% premium</small>
+        </div>
+        <div class="card">
+          <h3>Cost of Capital</h3>
+          <p>10.3% → 8.7%</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="links">
+      <a href="report.pdf" target="_blank">View Full Report (PDF)</a>
+      <a href="DIS-fcffsimpleginzu.xlsx" target="_blank">Download DCF Model (Excel)</a>
+    </section>
+
+    <section class="visuals">
+      <h2>Visual Exhibits</h2>
+      <p>Below are sample placeholders for charts. These can later be replaced with Tableau/Looker embeds.</p>
+      <iframe src="https://public.tableau.com/views/YourDashboard" 
+              title="Disney DCF Dashboard"></iframe>
+    </section>
+
+    <section class="sensitivity">
+      <h2>Sensitivity Snapshot</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>WACC</th>
+            <th>Value / Share ($)</th>
+            <th>% of Market Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>8.0%</td><td>$61.30</td><td>51.6%</td></tr>
+          <tr><td>8.5%</td><td>$58.75</td><td>49.5%</td></tr>
+          <tr><td>9.0%</td><td>$56.30</td><td>47.4%</td></tr>
+          <tr><td>9.5%</td><td>$54.00</td><td>45.5%</td></tr>
+          <tr><td>10.0%</td><td>$51.70</td><td>43.5%</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eshaan Arora</p>
+  </footer>
+</body>
+</html>
