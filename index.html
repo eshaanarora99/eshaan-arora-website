@@ -1,74 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Eshaan Arora</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Bootstrap CSS 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eshaan Arora | Data & Analytics Professional</title>
+  <meta name="description" content="Eshaan Arora is a data and analytics professional focused on data-driven insights, strategic analysis, and applied machine learning.">
+  <meta property="og:title" content="Eshaan Arora | Data & Analytics Professional">
+  <meta property="og:description" content="Modern, static portfolio featuring analytics projects, experience, and contact details.">
+  <meta property="og:image" content="images/headshot.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
-    
-    <header>
-        <h1>Welcome!</h1>
-    </header>
-
-    <!-- Profile Picture -->
-    <a href="index.html">
-        <img src="images/headshot.jpeg" alt="A photo of Eshaan Arora" style="max-width:100%; height:auto;">
-    </a>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="container">
-        <h2>About Me</h2>
-        <p>Welcome to my website! I’m Eshaan Arora (pronounced Ee-shawn Aurora), a young professional with a deep love for data-driven insights and strategic analysis. I recently graduated with my MS in Business Analytics at the University of Texas at Austin. This academic journey augmented my knowledge of data science, machine learning, and advanced analytics, preparing me for a dynamic career in data-driven decision-making.</p>
-    
-        <p>During my time at Florida State University, I focused on projects that honed my analytical skills and introduced me to the transformative power of data. Whether it’s developing innovative solutions or diving deep into complex datasets, I’m driven by a desire to turn raw information into actionable insights that solve real-world problems.</p>
-    
-        <p>Outside of academics and professional development, I enjoy challenging myself with strategic games like chess, which has enhanced my critical thinking and patience. I’m also on a personal journey of language learning, with a 600+ day streak on Duolingo as I immerse myself in Spanish. This experience has deepened my appreciation for diverse cultures and communication.</p>
-    
-        <p>As I move forward, my goal is to leverage my skills in data science and analytics to create meaningful impact, helping businesses navigate complex challenges with precision and insight. Thanks for stopping by, and feel free to explore my projects, interests, and more!</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">Eshaan Arora</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-secondary" href="resume.html">Resume</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+          <span data-theme-label>Light</span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    
-    <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="portfolio-section">
-            <h3>Bond Price Calculator and Graphing Application</h3>
-            <p>Developed a calculator to calculate bond prices based on the coupon rate, par value, time to maturity, yield to maturity, etc., while also providing a graph to serve as a visual aid.</p>
-            <p><a href="bond-calculator-code.html" target="_blank">View the bond calculator code</a></p>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div data-reveal class="reveal">
+          <p class="section-subtitle">Data-driven insights · Strategic analysis · Applied analytics</p>
+          <h1>Building clarity from complex data for smarter decisions.</h1>
+          <p>
+            I’m Eshaan Arora (pronounced Ee-shawn Aurora), a data and analytics professional with an
+            MS in Business Analytics from the University of Texas at Austin. I focus on turning raw data
+            into actionable strategy across financial modeling, machine learning, and advanced analytics.
+          </p>
+          <div class="hero-cta">
+            <a class="button button-primary" href="#projects">View featured work</a>
+            <a class="button button-secondary" href="contact.html">Get in touch</a>
+          </div>
         </div>
+        <div class="hero-card" data-reveal>
+          <div class="hero-image">
+            <img src="images/headshot.jpeg" alt="Portrait of Eshaan Arora">
+          </div>
+          <p>
+            Based on a blend of academic research and hands-on projects, I bring a disciplined approach
+            to analytics, storytelling, and decision-making.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <div class="portfolio-section">
-            <h3>Amazonia Week - Organizer</h3>
-            <p>Led quantitative research and organized a week-long seminar at Florida State University focused on public awareness of discrimination faced by indigenous tribes in the Amazon. Watch the video below:</p>
-    
-            <!-- YouTube video embedded here -->
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/EAqpm_oeSso?si=Xn71wQXZo6q4naqC" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">About</h2>
+          <p class="section-subtitle">
+            I’m driven by a love for data-driven insights and strategic analysis, with a track record of
+            turning complex information into actionable outcomes.
+          </p>
+        </div>
+        <div class="grid-2">
+          <div class="card reveal" data-reveal>
+            <p>
+              My MS in Business Analytics at the University of Texas at Austin strengthened my foundation
+              in data science, machine learning, and advanced analytics, preparing me for a career in
+              data-driven decision-making.
+            </p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <p>
+              At Florida State University, I focused on analytics-forward projects and research, learning
+              how to design solutions that connect technical rigor with real-world impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-subtitle">Academic and project leadership experience centered on analytics, research, and strategy.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card reveal" data-reveal>
+            <h3>University of Texas at Austin</h3>
+            <p>MS in Business Analytics focused on data science, machine learning, and advanced analytics.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <h3>Florida State University</h3>
+            <p>Project-driven research in analytics and quantitative insights, including organizing Amazonia Week.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">A highlight reel of recent analytics, finance, and research work.</p>
+        </div>
+        <div class="project-grid">
+          <article class="card project-card reveal" data-reveal>
+            <h3>Disney (DIS) Intrinsic Valuation – DCF & Investor Report</h3>
+            <p>
+              Built a full FCFF-based discounted cash flow model with operating assumptions, WACC build,
+              sensitivity analysis, and an investor-ready memo.
+            </p>
+            <div class="tag-list">
+              <span class="tag">DCF Modeling</span>
+              <span class="tag">Financial Analysis</span>
+              <span class="tag">Investor Reporting</span>
             </div>
+            <div class="project-links">
+              <a href="disney-analysis.html">Project page</a>
+              <a href="documents/DIS-Memo.pdf" target="_blank" rel="noreferrer">Investor memo (PDF)</a>
+              <a href="documents/dis_fcffsimpleginzu.xlsx" target="_blank" rel="noreferrer">DCF model (Excel)</a>
+            </div>
+          </article>
+          <article class="card project-card reveal" data-reveal>
+            <h3>Comprehensive Spotify Listening History Analysis Program</h3>
+            <p>
+              Analyzes Spotify listening data and visualizes trends using interactive charts and maps.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Visualization</span>
+              <span class="tag">User Insights</span>
+            </div>
+            <div class="project-links">
+              <a href="spotify-data-analysis.html">View project</a>
+            </div>
+          </article>
+          <article class="card project-card reveal" data-reveal>
+            <h3>Bond Price Calculator and Graphing Application</h3>
+            <p>
+              A bond pricing calculator with configurable inputs and a supporting visualization that helps
+              explain pricing sensitivity.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Finance</span>
+              <span class="tag">Calculator</span>
+              <span class="tag">Visualization</span>
+            </div>
+            <div class="project-links">
+              <a href="bond-calculator-code.html">View project</a>
+            </div>
+          </article>
         </div>
-    </div>
 
+        <div class="section-header" data-reveal style="margin-top: var(--space-8);">
+          <h2 class="section-title">All Projects</h2>
+          <p class="section-subtitle">Explore the complete project list and supporting resources.</p>
+        </div>
+        <ul class="project-list" data-reveal>
+          <li>
+            <strong>Present Value or Future Value Calculator</strong>
+            <span>Investment planning tool supporting annuities, perpetuities, and multi-phase growth.</span>
+            <a href="present-future-value-calculator.html">View calculator</a>
+          </li>
+          <li>
+            <strong>Yahoo Finance Data Fetcher</strong>
+            <span>Real-time financial data fetcher for indices, crypto, and equities.</span>
+            <a href="stock_quotes.html">View program</a>
+          </li>
+          <li>
+            <strong>Amazonia Week Organizer</strong>
+            <span>Led quantitative research and organized a week-long seminar on indigenous discrimination.</span>
+            <a href="portfolio.html#amazonia">Watch the video</a>
+          </li>
+          <li>
+            <strong>ScanSense AI: Enhancing Self-Checkout Efficiency with Machine Learning</strong>
+            <span>AI-powered self-checkout classifier using ResNet with 78.6% accuracy.</span>
+            <a href="https://open.substack.com/pub/earora/p/bagged-tagged-and-identified-the?r=1by0ez&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank" rel="noreferrer">Read the post</a>
+          </li>
+          <li>
+            <strong>Predicting Michelin Star Potential with Data Analytics</strong>
+            <span>Analyzed 78,000+ restaurant reviews using topic modeling, sentiment analysis, and text similarity.</span>
+            <a href="documents/Unstructured-Group-Project.pdf" target="_blank" rel="noreferrer">View project PDF</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Skills & Focus Areas</h2>
+          <p class="section-subtitle">Core capabilities across analytics, modeling, and strategic insight.</p>
+        </div>
+        <div class="chip-group" data-reveal>
+          <span class="chip">Data science</span>
+          <span class="chip">Machine learning</span>
+          <span class="chip">Advanced analytics</span>
+          <span class="chip">Strategic analysis</span>
+          <span class="chip">Financial modeling</span>
+          <span class="chip">Research & reporting</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Let’s connect about analytics, finance, or new opportunities.</p>
+        </div>
+        <div class="contact-grid" data-reveal>
+          <div class="contact-card">
+            <strong>Email</strong>
+            <p><a href="mailto:eshaan.arora@utexas.edu">eshaan.arora@utexas.edu</a></p>
+          </div>
+          <div class="contact-card">
+            <strong>Phone</strong>
+            <p>(727) 608-7093</p>
+          </div>
+          <div class="contact-card">
+            <strong>LinkedIn</strong>
+            <p><a href="https://www.linkedin.com/in/e-arora/" target="_blank" rel="noreferrer">linkedin.com/in/e-arora</a></p>
+          </div>
+          <div class="contact-card">
+            <strong>GitHub</strong>
+            <p><a href="https://www.github.com/eshaanarora99/" target="_blank" rel="noreferrer">github.com/eshaanarora99</a></p>
+          </div>
+          <div class="contact-card">
+            <strong>Substack</strong>
+            <p><a href="https://earora.substack.com" target="_blank" rel="noreferrer">earora.substack.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="audit" data-reveal>
+          <h2 class="section-title">Design audit</h2>
+          <ul>
+            <li>Streamlined the navigation into an anchor-based flow to improve information hierarchy.</li>
+            <li>Introduced a cohesive card system and spacing scale for consistent rhythm across sections.</li>
+            <li>Added theme-aware styling, accessibility enhancements, and reduced-motion friendly transitions.</li>
+            <li>Elevated project storytelling with featured cards, tags, and clear outcomes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="container">
-        <h2>Read My Blog</h2>
-        <p>Check out the latest articles on my <a href="blog.html">blog page</a>!</p>
+      <p>&copy; 2024 Eshaan Arora · <a href="portfolio.html">Portfolio</a> · <a href="blog.html">Blog</a></p>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Eshaan Arora</p>
-    </footer>
+  </footer>
 </body>
 </html>

@@ -1,57 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs, Essays & Papers - Eshaan Arora</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Optional Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Writing | Eshaan Arora</title>
+  <meta name="description" content="Essays, papers, and blog posts by Eshaan Arora.">
+  <meta property="og:title" content="Blog & Writing | Eshaan Arora">
+  <meta property="og:description" content="Read essays, papers, and Substack posts by Eshaan Arora.">
+  <meta property="og:image" content="images/headshot.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-    <!-- Optional Bootstrap JavaScript -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
-
-    <header>
-        <h1>Blog</h1>
-    </header>
-
-    <a href="index.html">
-        <img src="images/headshot.jpeg" alt="A photo of Eshaan Arora" style="max-width:100%; height:auto;">
-    </a>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">Eshaan Arora</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
         <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="container">
-        <h2>Essays and Papers</h2>
-        <div class="resume-section">
-            <h3>The Causes of Japan's Lost Decade and its Effects on Monetary and Fiscal Policy</h3>
-            <p>An in-depth exploration of Japan's economic struggles in the 1990s and their impact on policy.</p>
-            <a href="documents/japan-lost-decade.pdf" target="_blank">Read the full paper (PDF)</a>
-        </div>
-
-        <h2>Blog Posts</h2>
-        <div class="resume-section">
-            <!-- Embed Substack Post -->
-            <div class="substack-container">
-                <div class="substack-post-embed">
-                    <p lang="en">Bagged, Tagged, and Identified: The Future of Self-Checkout with AI by Eshaan Arora</p>
-                    <p></p>
-                    <a data-post-link href="https://earora.substack.com/p/bagged-tagged-and-identified-the">Read on Substack</a>
-                </div>
-                <script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
-            </div>
-        </div>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-secondary" href="portfolio.html">Portfolio</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+          <span data-theme-label>Light</span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2024 Eshaan Arora</p>
-    </footer>
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h1 class="section-title">Blog & Writing</h1>
+        <p class="section-subtitle">Essays, papers, and public research notes.</p>
+      </div>
+
+      <section aria-label="Essays and papers" class="section" style="padding-top: 0;">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Essays and Papers</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal" data-reveal>
+            <h3>The Causes of Japan's Lost Decade and its Effects on Monetary and Fiscal Policy</h3>
+            <p>An exploration of Japan's economic struggles in the 1990s and their impact on policy.</p>
+            <div class="project-links">
+              <a href="documents/japan-lost-decade.pdf" target="_blank" rel="noreferrer">Read the full paper (PDF)</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-label="Blog posts" class="section" style="padding-top: 0;">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Blog Posts</h2>
+        </div>
+        <div class="substack-container" data-reveal>
+          <div class="substack-post-embed">
+            <p lang="en">Bagged, Tagged, and Identified: The Future of Self-Checkout with AI by Eshaan Arora</p>
+            <a data-post-link href="https://earora.substack.com/p/bagged-tagged-and-identified-the">Read on Substack</a>
+          </div>
+          <script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Eshaan Arora · <a href="index.html">Home</a> · <a href="portfolio.html">Portfolio</a></p>
+    </div>
+  </footer>
 </body>
 </html>
