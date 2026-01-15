@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Eshaan Arora</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Bootstrap CSS 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Eshaan Arora</title>
+  <meta name="description" content="View or download the resume of Eshaan Arora.">
+  <meta property="og:title" content="Resume | Eshaan Arora">
+  <meta property="og:description" content="Download the resume PDF or view it directly in your browser.">
+  <meta property="og:image" content="images/headshot.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
-    
 <body>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
-    <header>
-        <h1>Resume</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">Eshaan Arora</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
         <a href="contact.html">Contact</a>
-
-    </nav>
-
-    <a href="index.html">
-    <img src="images/headshot.jpeg" alt="A photo of Eshaan Arora" style="max-width:100%; height:auto;">
-    </a>
-
-    <div class="container">
-        <h2>View or Download My Resume</h2>
-        <!-- Embed the PDF resume -->
-        <embed src="documents/eshaan-arora-resume.pdf" width="100%" height="600px" type="application/pdf">
-        <!-- Provide a direct download link as a fallback -->
-        <p>If the PDF does not display, <a href="documents/eshaan-arora-resume.pdf" download>click here to download my resume.</a></p>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-secondary" href="portfolio.html">Portfolio</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+          <span data-theme-label>Light</span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2024 Eshaan Arora</p>
-    </footer>
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h1 class="section-title">Resume</h1>
+        <p class="section-subtitle">Download the PDF or view it directly below.</p>
+      </div>
+      <div class="card reveal" data-reveal>
+        <embed class="resume-embed" src="documents/eshaan-arora-resume.pdf" type="application/pdf">
+        <p>
+          If the PDF does not display, <a href="documents/eshaan-arora-resume.pdf" download>download the resume here.</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Eshaan Arora · <a href="index.html">Home</a> · <a href="portfolio.html">Portfolio</a></p>
+    </div>
+  </footer>
 </body>
 </html>

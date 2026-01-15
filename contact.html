@@ -1,43 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Eshaan Arora</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Bootstrap CSS 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Eshaan Arora</title>
+  <meta name="description" content="Contact information and social links for Eshaan Arora.">
+  <meta property="og:title" content="Contact | Eshaan Arora">
+  <meta property="og:description" content="Email, LinkedIn, GitHub, and Substack links.">
+  <meta property="og:image" content="images/headshot.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
-    <header>
-        <h1>Contact Me</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-
-    </nav>
-
-    <a href="index.html">
-    <img src="images/headshot.jpeg" alt="A photo of Eshaan Arora" style="max-width:100%; height:auto;">
-    </a>
-
-    <div class="container">
-        <h2>Get in Touch</h2>
-        <p>Email: <a href="mailto:eshaan.arora@utexas.edu">eshaan.arora@utexas.edu</a></p>
-        <p>Phone: (727) 608-7093</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/e-arora/" target="_blank">linkedin.com/in/e-arora</a></p>
-        <p>GitHub: <a href="https://www.github.com/eshaanarora99/" target="_blank">github.com/eshaanarora99</a></p>
-        <p>Substack: <a href="https://earora.substack.com" target="_blank">https://earora.substack.com</a></p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">Eshaan Arora</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-secondary" href="resume.html">Resume</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+          <span data-theme-label>Light</span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2024 Eshaan Arora</p>
-    </footer>
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h1 class="section-title">Contact</h1>
+        <p class="section-subtitle">Feel free to reach out about analytics projects, collaborations, or opportunities.</p>
+      </div>
+      <div class="contact-grid" data-reveal>
+        <div class="contact-card">
+          <strong>Email</strong>
+          <p><a href="mailto:eshaan.arora@utexas.edu">eshaan.arora@utexas.edu</a></p>
+        </div>
+        <div class="contact-card">
+          <strong>Phone</strong>
+          <p>(727) 608-7093</p>
+        </div>
+        <div class="contact-card">
+          <strong>LinkedIn</strong>
+          <p><a href="https://www.linkedin.com/in/e-arora/" target="_blank" rel="noreferrer">linkedin.com/in/e-arora</a></p>
+        </div>
+        <div class="contact-card">
+          <strong>GitHub</strong>
+          <p><a href="https://www.github.com/eshaanarora99/" target="_blank" rel="noreferrer">github.com/eshaanarora99</a></p>
+        </div>
+        <div class="contact-card">
+          <strong>Substack</strong>
+          <p><a href="https://earora.substack.com" target="_blank" rel="noreferrer">earora.substack.com</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Eshaan Arora · <a href="index.html">Home</a> · <a href="portfolio.html">Portfolio</a></p>
+    </div>
+  </footer>
 </body>
 </html>

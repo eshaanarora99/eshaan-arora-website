@@ -1,108 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Eshaan Arora</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Bootstrap CSS 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Eshaan Arora</title>
+  <meta name="description" content="Portfolio of analytics, finance, and research projects by Eshaan Arora.">
+  <meta property="og:title" content="Portfolio | Eshaan Arora">
+  <meta property="og:description" content="Featured analytics, finance, and research projects with outcomes and links.">
+  <meta property="og:image" content="images/headshot.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
-    <header>
-        <h1>Portfolio</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">Eshaan Arora</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
         <a href="contact.html">Contact</a>
-    </nav>
-
-    <a href="index.html">
-        <img src="images/headshot.jpeg" alt="A photo of Eshaan Arora" style="max-width:100%; height:auto;">
-    </a>
-
-    <div class="container">
-        <h2>Projects</h2>
-
-        <div class="portfolio-section">
-              <h3>Disney (DIS) Intrinsic Valuation – DCF & Investor Report</h3>
-              <p>
-                A full FCFF-based discounted cash flow model of The Walt Disney Company, including
-                operating assumptions, WACC build, sensitivity analysis, and a clean, investor-ready memo.
-                The project page hosts downloadable exhibits and visuals.
-              </p>
-              <p>
-                <a href="disney-analysis.html" target="_blank" rel="noreferrer">View the Disney DCF Project Page</a>
-                &nbsp;•&nbsp;
-                <a href="documents/DIS-Memo.pdf" target="_blank" rel="noreferrer">Read the Investor Memorandum (PDF)</a>
-                &nbsp;•&nbsp;
-                <a href="documents/dis_fcffsimpleginzu.xlsx" target="_blank" rel="noreferrer">Download the DCF Model (Excel)</a>
-              </p>
-        </div>
-
-        
-        <div class="portfolio-section">
-            <h3>Comprehensive Spotify Listening History Analysis Program</h3>
-            <p>This project allows users to analyze their Spotify listening data and visualize it using interactive charts and maps.</p>
-            <p><a href="spotify-data-analysis.html" target="_blank">View the Spotify Data Analysis Program</a></p>
-        </div>
-
-        <div class="portfolio-section">
-            <h3>Bond Price Calculator and Graphing Application</h3>
-            <p>Developed a calculator to calculate bond prices based on the coupon rate, par value, time to maturity, yield to maturity, etc., while also providing a graph to serve as a visual aid.</p>
-            <p><a href="bond-calculator-code.html" target="_blank">View the bond calculator code</a></p>
-        </div>
-
-        <div class="portfolio-section">
-            <h3>Present Value or Future Value Calculator</h3>
-            <p>Created a Present Value (PV) and Future Value (FV) calculator for investment planning, which handles multiple growth phases and provides flexible options for annuities and perpetuities.</p>
-            <p><a href="present-future-value-calculator.html" target="_blank">View the PV/FV calculator code</a></p>
-        </div>
-
-        <div class="portfolio-section">
-            <h3>Yahoo Finance Data Fetcher</h3>
-            <p>Developed a real-time financial data fetcher using Yahoo Finance API via RapidAPI. This program fetches and prints stock/index data such as Dow Jones, NASDAQ, Bitcoin, and more.</p>
-            <p><a href="stock_quotes.html" target="_blank">View the Yahoo Finance Data Fetcher Code</a></p>
-        </div>
-
-        <div class="portfolio-section">
-            <h3>Amazonia Week Organizer</h3>
-            <p>Led quantitative research and organized a week-long seminar at Florida State University focused on public awareness of discrimination faced by indigenous tribes in the Amazon. Watch the video below:</p>
-
-            <!-- YouTube video embedded here -->
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/EAqpm_oeSso?si=Xn71wQXZo6q4naqC" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="portfolio-section">
-            <h3>ScanSense AI: Enhancing Self-Checkout Efficiency with Machine Learning</h3>
-            <p>Developed an AI-powered self-checkout system using ResNet architecture to classify non-barcoded grocery items with 78.6% accuracy, addressing challenges like plastic bag obstructions and poor lighting.</p>
-            <p><a href="https://open.substack.com/pub/earora/p/bagged-tagged-and-identified-the?r=1by0ez&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank">Read the Blog Post</a></p>
-        </div>
-
-        <div class="portfolio-section">
-            <h3>Predicting Michelin Star Potential with Data Analytics</h3>
-            <p>Predicted 10 Austin restaurants with Michelin Star potential based on data-driven insights and highlighted unique patterns like the importance of chef personality and specific culinary styles.</p>
-            <p>Analyzed over 78,000 restaurant reviews using advanced techniques such as Topic Modeling (LDA), Sentiment Analysis, and Text Similarity Analysis to identify key traits of Michelin-starred restaurants.</p>
-            <p><a href="documents/Unstructured-Group-Project.pdf" target="_blank">View the Full Project Details</a></p>
-        </div>
-
+      </nav>
+      <div class="header-actions">
+        <a class="button button-secondary" href="resume.html">Resume</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+          <span data-theme-label>Light</span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2024 Eshaan Arora</p>
-    </footer>
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h1 class="section-title">Portfolio</h1>
+        <p class="section-subtitle">A curated collection of analytics, finance, and research projects.</p>
+      </div>
+
+      <section aria-label="Featured projects">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Deep dives with supporting assets, models, and research.</p>
+        </div>
+        <div class="project-grid">
+          <article class="card project-card reveal" data-reveal>
+            <h3>Disney (DIS) Intrinsic Valuation – DCF & Investor Report</h3>
+            <p>
+              A full FCFF-based discounted cash flow model, WACC build, sensitivity analysis, and an
+              investor-ready memo with downloadable exhibits.
+            </p>
+            <div class="tag-list">
+              <span class="tag">DCF Modeling</span>
+              <span class="tag">Financial Analysis</span>
+              <span class="tag">Investor Memo</span>
+            </div>
+            <div class="project-links">
+              <a href="disney-analysis.html">Project page</a>
+              <a href="documents/DIS-Memo.pdf" target="_blank" rel="noreferrer">Investor memorandum</a>
+              <a href="documents/dis_fcffsimpleginzu.xlsx" target="_blank" rel="noreferrer">DCF model</a>
+            </div>
+          </article>
+          <article class="card project-card reveal" data-reveal>
+            <h3>Comprehensive Spotify Listening History Analysis Program</h3>
+            <p>Analyzes Spotify listening data and visualizes trends using interactive charts and maps.</p>
+            <div class="tag-list">
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Visualization</span>
+              <span class="tag">Interactive</span>
+            </div>
+            <div class="project-links">
+              <a href="spotify-data-analysis.html">View project</a>
+            </div>
+          </article>
+          <article class="card project-card reveal" data-reveal>
+            <h3>Bond Price Calculator and Graphing Application</h3>
+            <p>Calculator for bond pricing with a visual graph for pricing sensitivity.</p>
+            <div class="tag-list">
+              <span class="tag">Finance</span>
+              <span class="tag">Calculator</span>
+              <span class="tag">Visualization</span>
+            </div>
+            <div class="project-links">
+              <a href="bond-calculator-code.html">View project</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-label="All projects" style="margin-top: var(--space-8);">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">All Projects</h2>
+          <p class="section-subtitle">Additional tools, analyses, and research work.</p>
+        </div>
+        <ul class="project-list" data-reveal>
+          <li>
+            <strong>Present Value or Future Value Calculator</strong>
+            <span>Flexible calculator covering annuities, perpetuities, and multi-phase growth.</span>
+            <a href="present-future-value-calculator.html">View calculator</a>
+          </li>
+          <li>
+            <strong>Yahoo Finance Data Fetcher</strong>
+            <span>Real-time financial data fetcher for Dow Jones, NASDAQ, Bitcoin, and more.</span>
+            <a href="stock_quotes.html">View code</a>
+          </li>
+          <li id="amazonia">
+            <strong>Amazonia Week Organizer</strong>
+            <span>Led quantitative research and organized a week-long seminar on indigenous discrimination.</span>
+            <div class="media-frame">
+              <iframe
+                src="https://www.youtube.com/embed/EAqpm_oeSso?si=Xn71wQXZo6q4naqC"
+                title="Amazonia Week seminar video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </li>
+          <li>
+            <strong>ScanSense AI: Enhancing Self-Checkout Efficiency with Machine Learning</strong>
+            <span>AI-powered self-checkout system using ResNet with 78.6% accuracy.</span>
+            <a href="https://open.substack.com/pub/earora/p/bagged-tagged-and-identified-the?r=1by0ez&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank" rel="noreferrer">Read the blog post</a>
+          </li>
+          <li>
+            <strong>Predicting Michelin Star Potential with Data Analytics</strong>
+            <span>Analyzed 78,000+ restaurant reviews with topic modeling, sentiment analysis, and text similarity.</span>
+            <a href="documents/Unstructured-Group-Project.pdf" target="_blank" rel="noreferrer">View project PDF</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Eshaan Arora · <a href="index.html">Home</a> · <a href="blog.html">Blog</a></p>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
