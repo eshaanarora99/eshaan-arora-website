@@ -2,6 +2,8 @@ const CONNECT4_ROWS = 6;
 const CONNECT4_COLS = 7;
 const AI_MOVE_DELAY_MS = 300;
 
+const API_BASE = "https://api-connect4.eshaanarora.com/connect4-api";
+
 const boardElement = document.getElementById('connect4-board');
 
 const getStatsDefaults = () => ({
