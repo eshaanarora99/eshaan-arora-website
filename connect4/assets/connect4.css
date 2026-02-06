@@ -43,7 +43,7 @@
   height: auto;
   display: block;
   border-radius: var(--radius-lg);
-  max-width: 520px; /* adjust up/down if you want it larger/smaller */
+  max-width: 600px; /* adjust up/down if you want it larger/smaller */
 }
 
 
