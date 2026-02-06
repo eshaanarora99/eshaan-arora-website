@@ -28,13 +28,24 @@
 }
 
 .connect4-hero-placeholder {
-  border: 2px dashed color-mix(in srgb, var(--accent) 40%, var(--border));
+  border: none;
+  padding: 0;
+  background: transparent;
   border-radius: var(--radius-lg);
-  padding: clamp(40px, 10vw, 80px);
-  text-align: center;
-  color: var(--muted);
-  background: color-mix(in srgb, var(--surface) 92%, var(--accent) 8%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.connect4-hero-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  max-width: 520px; /* adjust up/down if you want it larger/smaller */
+}
+
 
 .connect4-layout {
   display: grid;
