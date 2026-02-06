@@ -31,19 +31,20 @@
   border: none;
   padding: 0;
   background: transparent;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 -24px; /* Negative margin to offset the card's padding (--space-6 = 24px) */
 }
 
 .connect4-hero-placeholder img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius-lg);
-  max-width: 100%; /* adjust up/down if you want it larger/smaller */
+  border-radius: 0;
+  max-width: none;
 }
 
 
