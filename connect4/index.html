@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connect 4 Project | Eshaan Arora</title>
-  <meta name="description" content="Connect 4 research project landing page featuring gameplay demos and training methodology.">
+  <meta name="description" content="Connect 4 project landing page featuring gameplay and training methodology.">
   <meta property="og:title" content="Connect 4 Project | Eshaan Arora">
-  <meta property="og:description" content="Explore the Connect 4 research project, gameplay demos, and model training notes.">
+  <meta property="og:description" content="Explore the Connect 4 game!">
   <meta property="og:image" content="/images/headshot.jpeg">
   <meta property="og:type" content="website">
   <meta name="color-scheme" content="light dark">
@@ -19,11 +19,11 @@
 
   <nav class="connect4-nav" aria-label="Connect 4 quick links">
     <div class="container connect4-nav-links">
-      <a class="button button-secondary" href="/">Back to Site</a>
-      <a class="button button-secondary" href="/connect4/">Back to Connect 4 Landing Page</a>
-      <a class="button button-secondary" href="/connect4/training-methodology/">Training Methodology</a>
-      <a class="button button-secondary" href="/connect4/play-cnn/">Play our Convoluted Neural Network Opponent</a>
-      <a class="button button-secondary" href="/connect4/play-transformer/">Play our Transformer Opponent</a>
+      <a class="button button-secondary" href="/">Back to the Main Portfolio Website</a>
+      <a class="button button-secondary" href="/connect4/">Back to the Game's Homepage</a>
+      <a class="button button-secondary" href="/connect4/training-methodology/">How the Game Works</a>
+      <a class="button button-secondary" href="/connect4/play-transformer/">Play the Game in Casual Mode</a>
+      <a class="button button-secondary" href="/connect4/play-cnn/">Play the Game in Challenge Mode</a>
     </div>
   </nav>
 
@@ -51,11 +51,18 @@
     <section class="hero">
       <div class="container hero-grid">
         <div data-reveal class="reveal">
-          <p class="section-subtitle">Connect 4 · Applied machine learning · Interactive demos</p>
-          <h1>Connect 4: research experiments and playable AI opponents.</h1>
+          <p class="section-subtitle">Connect 4 Game · Casual, Free-to-Play · Powered by Machine Learning</p>
+          <h1>Connect 4: Playable AI opponents!</h1>
           <p>
-            This space will showcase how we trained multiple models to master Connect 4, alongside
-            playable demos and methodology notes. Use the buttons above to explore the experiments.
+            This project is a fully playable, end-to-end AI implementation of Connect 4, designed
+            to explore how different modeling approaches translate into real gameplay.
+            The system was trained on a large, strategically diverse dataset generated using
+            Monte Carlo Tree Search, allowing the AI to learn optimal move selection across a wide range of board states.
+            Two distinct models power the game: a convolutional neural network optimized for fast, consistent play, and
+            a transformer-based model designed to reason over broader board patterns. Both models are deployed on a cloud backend and
+            integrated into a live web interface, enabling real-time play and comparison. Beyond model accuracy, the project
+            emphasizes product trade-offs—responsiveness, difficulty, and user experience—demonstrating how AI design decisions
+            surface directly in an interactive game environment.
           </p>
         </div>
         <div class="hero-card" data-reveal>
@@ -73,28 +80,27 @@
       <div class="container">
         <div class="section-header" data-reveal>
           <h2 class="section-title">What you can explore</h2>
-          <p class="section-subtitle">Hands-on games, model notes, and a preview of future benchmarks.</p>
+          <p class="section-subtitle">Our Casual and Challenge Mode Opponents, how the game works, and more!</p>
         </div>
         <div class="grid-2">
           <article class="card reveal" data-reveal>
             <h3>Play the AI opponents</h3>
             <p>
-              Jump into a match against the Convoluted Neural Network or Transformer opponent and see
+              Jump into a game against our AI models and see
               how each model behaves in real time.
             </p>
             <div class="project-links">
-              <a href="/connect4/play-cnn/">Play the CNN opponent</a>
-              <a href="/connect4/play-transformer/">Play the Transformer opponent</a>
+              <a href="/connect4/play-transformer/">Play in Casual Mode</a>
+              <a href="/connect4/play-cnn/">Play in Challenge Mode</a>
             </div>
           </article>
           <article class="card reveal" data-reveal>
-            <h3>Training methodology</h3>
+            <h3>How the AI Opponents Work</h3>
             <p>
-              Dive into the data pipeline, training objectives, and evaluation approach that power each
-              model. Full write-ups are coming soon.
+              Learn how the system is designed, trained, and evaluated—and how those decisions shape gameplay and user experience.
             </p>
             <div class="project-links">
-              <a href="/connect4/training-methodology/">View methodology notes</a>
+              <a href="/connect4/training-methodology/">View the product notes</a>
             </div>
           </article>
         </div>
