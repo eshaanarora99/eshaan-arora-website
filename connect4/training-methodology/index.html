@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connect 4 Training Methodology | Eshaan Arora</title>
-  <meta name="description" content="Training methodology notes for the Connect 4 AI opponents.">
-  <meta property="og:title" content="Connect 4 Training Methodology | Eshaan Arora">
-  <meta property="og:description" content="Notes on training data, model architecture, and evaluation for Connect 4 AI.">
+  <title>How the Game Works | Connect 4 | Eshaan Arora</title>
+  <meta name="description" content="How the Connect 4 AI opponents are designed, trained, and evaluated.">
+  <meta property="og:title" content="How the Game Works | Connect 4 | Eshaan Arora">
+  <meta property="og:description" content="Learn how design and training decisions shape the behavior of the Connect 4 AI opponents.">
   <meta property="og:image" content="/images/headshot.jpeg">
   <meta property="og:type" content="website">
   <meta name="color-scheme" content="light dark">
@@ -19,17 +19,17 @@
 
   <div class="construction-banner">
     <div class="container">
-      <strong>UNDER CONSTRUCTION</strong> This page is being drafted. The full methodology write-up will arrive soon.
+      <strong>NOTE:</strong> This page is meant to provide curious users and site visitors with a brief overview of how this game was built from the ground up.
     </div>
   </div>
 
   <nav class="connect4-nav" aria-label="Connect 4 quick links">
     <div class="container connect4-nav-links">
       <a class="button button-secondary" href="/">Back to Site</a>
-      <a class="button button-secondary" href="/connect4/">Back to Connect 4 Landing Page</a>
-      <a class="button button-secondary" href="/connect4/training-methodology/">Training Methodology</a>
-      <a class="button button-secondary" href="/connect4/play-cnn/">Play our Convoluted Neural Network Opponent</a>
-      <a class="button button-secondary" href="/connect4/play-transformer/">Play our Transformer Opponent</a>
+      <a class="button button-secondary" href="/connect4/">Back to the Game's Homepage</a>
+      <a class="button button-secondary" href="/connect4/training-methodology/">How the Game Works</a>
+      <a class="button button-secondary" href="/connect4/play-transformer/">Play the Game in Casual Mode</a>
+      <a class="button button-secondary" href="/connect4/play-cnn/">Play the Game in Challenge Mode</a>
     </div>
   </nav>
 
@@ -56,37 +56,50 @@
   <main id="main" class="section">
     <div class="container">
       <div class="section-header" data-reveal>
-        <h1 class="section-title">Training Methodology</h1>
-        <p class="section-subtitle">A structured overview of how the Connect 4 models are trained and evaluated.</p>
+        <h1 class="section-title">How the Game Works</h1>
+        <p class="section-subtitle">
+          An overview of how the Connect 4 AI opponents are designed, trained, and evaluated—and how those decisions show up in gameplay.
+        </p>
       </div>
 
       <div class="grid-2">
         <article class="card reveal" data-reveal>
           <h2>Data &amp; simulation pipeline</h2>
           <p>
-            Placeholder for the data generation strategy, self-play setup, and the feature engineering
-            used to represent Connect 4 game states.
+            The AI opponents are trained using large-scale self-play simulations that generate diverse game situations.
+            Each board state is encoded into a structured representation, enabling the models to learn both tactical moves
+            and longer-term strategies. This pipeline supports rapid iteration while keeping gameplay behavior consistent
+            across different difficulty modes.
           </p>
         </article>
+
         <article class="card reveal" data-reveal>
-          <h2>Model architecture</h2>
+          <h2>Model design &amp; trade-offs</h2>
           <p>
-            Placeholder for details on the CNN and Transformer architectures, training objectives, and
-            regularization techniques.
+            Two modeling approaches power the game. The Casual Mode opponent prioritizes fast responses and consistent play,
+            while the Challenge Mode opponent is designed for deeper strategic reasoning. Both models are trained on the same
+            data and evaluated side by side, making the trade-offs between responsiveness and difficulty visible to players.
           </p>
         </article>
+
         <article class="card reveal" data-reveal>
-          <h2>Evaluation &amp; benchmarks</h2>
+          <h2>Evaluation through gameplay</h2>
           <p>
-            Placeholder for evaluation metrics, match simulations, and how we compare the models against
-            baseline strategies.
+            Performance is evaluated through automated match simulations and live games against users.
+            Beyond win rate, evaluation focuses on responsiveness, predictability, and overall player experience—ensuring
+            the AI feels challenging without breaking the flow of play.
           </p>
         </article>
+
         <article class="card reveal" data-reveal>
-          <h2>Future work</h2>
+          <h2>Future improvements</h2>
           <p>
-            Placeholder for next steps, including server-based inference, skill ratings, and tournament
-            testing.
+            The current version is production-ready and playable out of the box.
+            You will most certainly enjoy playing against our opponents, just as I have.
+            That said, I plan to continue to iterate this game over time.
+            Planned enhancements include server-side inference optimizations, skill-based difficulty tiers,
+            player rating systems, and tournament-style benchmarking. These additions will make it easier
+            to compare strategies, tune difficulty, and improve long-term replayability.
           </p>
         </article>
       </div>
