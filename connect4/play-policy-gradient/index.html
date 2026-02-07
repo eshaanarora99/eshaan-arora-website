@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Connect 4 Challenge Mode | Eshaan Arora</title>
+  <meta name="description" content="Play Connect 4 in Insane Mode against our high-difficulty CNN-based AI opponent, boosted with additional rigorous training.">
+  <meta property="og:title" content="Play Connect 4 Insane Mode | Eshaan Arora">
+  <meta property="og:description" content="Connect 4 for Expert and Professional Players">
+  <meta property="og:image" content="/images/headshot.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/connect4/assets/connect4.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/connect4/assets/connect4.js" defer></script>
+</head>
+<body data-opponent="cnn">
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <nav class="connect4-nav" aria-label="Connect 4 quick links">
+    <div class="container connect4-nav-links">
+      <a class="button button-secondary" href="/">Back to the Main Portfolio Website</a>
+      <a class="button button-secondary" href="/connect4/">Back to the Game's Homepage</a>
+      <a class="button button-secondary" href="/connect4/training-methodology/">How the Game Works</a>
+      <a class="button button-secondary" href="/connect4/play-transformer/">Play the Game in Casual Mode</a>
+      <a class="button button-secondary" href="/connect4/play-cnn/">Play the Game in Challenge Mode</a>
+      <a class="button button-secondary" href="/connect4/play-policy-gradient/">Play the Game in Insane Mode</a>
+    </div>
+  </nav>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="/index.html">Eshaan Arora</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/index.html#about">About</a>
+        <a href="/index.html#experience">Experience</a>
+        <a href="/index.html#projects">Projects</a>
+        <a href="/index.html#skills">Skills</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-secondary" href="/resume.html">Resume</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+          <span data-theme-label>Light</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h1 class="section-title">Play Insane Mode</h1>
+        <p class="section-subtitle">Play a competitive game against our bespoke CNN-based model boosted with additional rigorous training, and keep track of your results.</p>
+      </div>
+
+      
+
+      <div class="connect4-layout">
+        <section class="card connect4-panel" aria-label="Game controls">
+          <h2>Game setup</h2>
+          <p>Choose whether you go first or second before starting the game.</p>
+
+          <div class="connect4-choice">
+            <label>
+              <input type="radio" name="first-move" value="user" checked>
+              I go first (Red)
+            </label>
+            <br>
+            <label>
+              <input type="radio" name="first-move" value="ai">
+              AI goes first (Red)
+            </label>
+          </div>
+
+          <div class="connect4-actions">
+            <button class="button button-primary" id="connect4-start" type="button">Start Game</button>
+            <button class="button button-secondary" id="connect4-reset" type="button">Reset</button>
+            <button class="button button-secondary" id="connect4-resign" type="button">Resign</button>
+          </div>
+
+          <div class="connect4-status" id="connect4-status" aria-live="polite">
+            Choose who goes first, then start the game.
+          </div>
+
+          <div class="connect4-colors">
+            <p><strong>Your color:</strong> <span id="connect4-user-color">Red</span></p>
+            <p><strong>AI color:</strong> <span id="connect4-ai-color">Blue</span></p>
+          </div>
+
+          <div class="connect4-stats">
+            <h3>Match record (CNN [Policy Gradient Boosted] opponent)</h3>
+            <ul>
+              <li>User wins <span id="connect4-user-wins">0</span></li>
+              <li>AI wins <span id="connect4-ai-wins">0</span></li>
+              <li>Draws <span id="connect4-draws">0</span></li>
+            </ul>
+            <small>Combined totals across all opponents:</small>
+            <ul>
+              <li>User wins <span id="connect4-total-user-wins">0</span></li>
+              <li>AI wins <span id="connect4-total-ai-wins">0</span></li>
+              <li>Draws <span id="connect4-total-draws">0</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card connect4-board-section" aria-label="Connect 4 board">
+          <h2>Board</h2>
+          <div class="connect4-board" id="connect4-board" role="grid" aria-label="Connect 4 board"></div>
+          <p class="section-subtitle" style="margin-top: var(--space-4);">
+            Tip: Click any column to drop your piece. The AI will respond automatically.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Eshaan Arora · <a href="/index.html">Home</a> · <a href="/blog.html">Blog</a></p>
+    </div>
+  </footer>
+</body>
+</html>
