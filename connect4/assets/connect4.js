@@ -50,7 +50,7 @@ const getAIMove = async (uiBoard, opponentType, userGoesFirst) => {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      modelType: opponentType, // 'cnn' or 'transformer'
+      modelType: opponentType, // 'cnn' or 'transformer' or 'pg'
       board: buildApiBoard(uiBoard, userGoesFirst),
     }),
   });
