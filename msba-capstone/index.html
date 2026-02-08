@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSBA Capstone | Financial Risk Insight Engine</title>
+  <meta name="description" content="MSBA Capstone project page for a conversational financial risk insight engine with semantic retrieval and reranking.">
+  <meta property="og:title" content="MSBA Capstone | Financial Risk Insight Engine">
+  <meta property="og:description" content="Project overview, outcomes, and Product Manager's Note.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="../index.html">Eshaan Arora</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-secondary" href="../resume.html">Resume</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+          <span data-theme-label>Light</span>
+        </button>
+      </div>
+    </div>
+  </header>
 
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h1 class="section-title">MSBA Capstone: Financial Risk Insight Engine</h1>
+        <p class="section-subtitle">
+          A conversational decision-support system designed to help leadership teams identify risk drivers
+          and simulate stress-test scenarios in real time.
+        </p>
+      </div>
+
+      <section class="card reveal" data-reveal aria-labelledby="project-overview-title">
+        <h2 id="project-overview-title">Project Overview</h2>
+        <p>
+          In high-stakes financial risk management, one of the biggest barriers to action is data paralysis:
+          the inability to rapidly synthesize large, fragmented datasets into decisions. This capstone focused
+          on moving beyond static retrieval and toward a system that delivers immediate strategic insight.
+        </p>
+        <p>
+          The team transitioned from an initial, incomplete metadata set to a comprehensive knowledge base with
+          over 1,000 integrated risk drivers, then scaled semantic retrieval by migrating from in-memory storage
+          to Chroma DB. During prototyping, we addressed LLM hallucination risk by introducing chat history and
+          rerankers. With reciprocal rank fusion, the system prioritized the most relevant documents and improved
+          reliability.
+        </p>
+        <p>
+          The final solution achieved a 92% response accuracy rate and transformed the workflow from manual query
+          handling into a conversational insight engine producing human-readable summaries for leadership use.
+        </p>
+        <div class="tag-list">
+          <span class="tag">Risk Analytics</span>
+          <span class="tag">LLM Systems</span>
+          <span class="tag">Semantic Retrieval</span>
+          <span class="tag">Chroma DB</span>
+          <span class="tag">Reciprocal Rank Fusion</span>
+        </div>
+      </section>
+
+      <section class="card reveal" data-reveal aria-labelledby="pm-note-title" style="margin-top: var(--space-6);">
+        <h2 id="pm-note-title">Product Manager's Note</h2>
+        <p>
+          The team worked very hard on this project, and we are very proud of the final product. I want to ensure
+          that we all receive due credit as a team: Eshaan Arora, Soham Bidyadhar, Albert Nguyen, Kimberly Simmonds,
+          and Isha Verma.
+        </p>
+        <p>
+          In the high-stakes world of financial risk management, leadership teams often face data paralysis, which is
+          the inability to quickly synthesize massive, disparate datasets into actionable strategies. Our goal with this
+          project was to move beyond simple data retrieval and build a system that delivers immediate strategic insight.
+          A key challenge was the quality and consistency of our data sources, so we managed the transition from an
+          initial, incomplete metadata set to a comprehensive integration of over 1,000 risk drivers.
+        </p>
+        <p>
+          To ensure this system could scale, I made the strategic decision to move from in-memory storage to Chroma DB,
+          enabling efficient semantic retrieval across a growing knowledge base.
+        </p>
+        <p>
+          During the prototyping phase, I identified a critical user-experience failure where the LLM would occasionally
+          hallucinate risk factors not present in the master list. Rather than accepting this, I iterated on the
+          architecture by implementing chat history and rerankers. By using reciprocal rank fusion, I was able to
+          prioritize the most relevant documents, significantly increasing the reliability of the system. The final
+          product achieved a 92% response accuracy rate and transformed the user experience from a manual query process
+          into a conversational insight engine that provides human-readable summaries. This allowed leadership to
+          identify risk drivers and simulate stress-test scenarios in real-time.
+        </p>
+      </section>
+
+      <section aria-label="Project documents" style="margin-top: var(--space-6);" data-reveal class="reveal">
+        <div class="section-header">
+          <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0;">Downloads</h2>
+        </div>
+        <div class="project-links">
+          <a class="button button-primary" href="../documents/product-manager-note.pdf" target="_blank" rel="noreferrer">Download Product Manager Note (PDF)</a>
+          <a class="button button-secondary" href="../documents/algorithmics-final-presentation.pdf" target="_blank" rel="noreferrer">Download Final Presentation (PDF)</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Eshaan Arora · <a href="../index.html">Home</a> · <a href="../portfolio.html">Portfolio</a></p>
+    </div>
+  </footer>
+</body>
+</html>
