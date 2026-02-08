@@ -454,6 +454,54 @@ button:focus-visible {
   height: 100%;
 }
 
+.apm-project-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  flex: 1;
+}
+
+.apm-project-content h2,
+.apm-project-content p,
+.apm-project-content .tag-list {
+  margin: 0;
+}
+
+.apm-project-card .button {
+  margin-top: var(--space-5);
+  align-self: flex-start;
+}
+
+.apm-bottom-actions {
+  margin-top: var(--space-7);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (max-width: 720px) {
+  .apm-hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apm-priority {
+    order: -1;
+  }
+}
+
+/* .apm-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+.apm-project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .apm-project-card .button {
   margin-top: auto;
   align-self: flex-start;
@@ -474,4 +522,4 @@ button:focus-visible {
   .apm-priority {
     order: -1;
   }
-}
+} */
