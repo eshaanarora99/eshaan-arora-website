@@ -16,11 +16,11 @@
   top: max(96px, 14vh);
   z-index: 40;
   width: clamp(220px, 22vw, 300px);
-  transition: transform 0.28s ease;
 }
 
-.connect4-nav.is-collapsed {
-  transform: translateX(calc(100% - 44px));
+
+.connect4-nav.is-collapsed .connect4-nav-panel {
+  display: none;
 }
 
 .connect4-nav-panel {
@@ -191,9 +191,6 @@
     width: min(82vw, 300px);
   }
 
-  .connect4-nav.is-collapsed {
-    transform: translateX(calc(100% - 38px));
-  }
 
   .connect4-nav-panel {
     max-height: 58vh;

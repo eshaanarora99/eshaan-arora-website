@@ -53,6 +53,8 @@ if (connect4Sidebar && connect4SidebarToggle) {
   connect4SidebarToggle.addEventListener('click', () => {
     const isCollapsed = connect4Sidebar.classList.toggle('is-collapsed');
     connect4SidebarToggle.setAttribute('aria-expanded', String(!isCollapsed));
-    connect4SidebarToggle.textContent = isCollapsed ? 'Show quick links' : 'Hide quick links';
+    connect4SidebarToggle.textContent = isCollapsed
+      ? 'Show Connect 4 Quick Links'
+      : 'Hide Connect 4 Quick Links';
   });
 }
