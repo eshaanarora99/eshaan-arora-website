@@ -18,14 +18,20 @@
 <body data-opponent="cnn">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <nav class="connect4-nav" aria-label="Connect 4 quick links">
-    <div class="container connect4-nav-links">
-      <a class="button button-secondary" href="/">Back to the Main Portfolio Website</a>
-      <a class="button button-secondary" href="/connect4/">Back to the Game's Homepage</a>
-      <a class="button button-secondary" href="/connect4/training-methodology/">How the Game Works</a>
-      <a class="button button-secondary" href="/connect4/play-transformer/">Play the Game in Casual Mode</a>
-      <a class="button button-secondary" href="/connect4/play-cnn/">Play the Game in Challenge Mode</a>
-      <a class="button button-secondary" href="/connect4/play-policy-gradient/">Play the Game in Insane Mode</a>
+  <nav class="connect4-nav" aria-label="Connect 4 quick links" data-connect4-sidebar>
+    <button class="connect4-nav-toggle" type="button" data-connect4-nav-toggle aria-expanded="true" aria-controls="connect4-nav-links">
+      Hide quick links
+    </button>
+    <div class="connect4-nav-panel">
+      <p class="connect4-nav-title">Connect 4 quick links</p>
+      <div class="connect4-nav-links" id="connect4-nav-links">
+        <a class="button button-secondary" href="/">Back to the Main Portfolio Website</a>
+        <a class="button button-secondary" href="/connect4/">Back to the Game's Homepage</a>
+        <a class="button button-secondary" href="/connect4/training-methodology/">How the Game Works</a>
+        <a class="button button-secondary" href="/connect4/play-transformer/">Play the Game in Casual Mode</a>
+        <a class="button button-secondary" href="/connect4/play-cnn/">Play the Game in Challenge Mode</a>
+        <a class="button button-secondary" href="/connect4/play-policy-gradient/">Play the Game in Insane Mode</a>
+      </div>
     </div>
   </nav>
 
