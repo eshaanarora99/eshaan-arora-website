@@ -16,21 +16,26 @@
   top: max(96px, 14vh);
   z-index: 40;
   width: clamp(220px, 22vw, 300px);
-}
-
-
-.connect4-nav.is-collapsed .connect4-nav-panel {
-  display: none;
-}
-
-.connect4-nav-panel {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: color-mix(in srgb, var(--surface) 94%, var(--bg));
   box-shadow: 0 16px 28px rgba(15, 23, 42, 0.12);
   padding: var(--space-3);
+}
+
+
+.connect4-nav-panel {
+  padding-top: var(--space-2);
   max-height: min(72vh, 680px);
   overflow-y: auto;
+  transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.2s ease;
+}
+
+.connect4-nav.is-collapsed .connect4-nav-panel {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  overflow: hidden;
 }
 
 .connect4-nav-title {
@@ -42,7 +47,6 @@
 
 .connect4-nav-toggle {
   width: 100%;
-  margin-bottom: var(--space-2);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: color-mix(in srgb, var(--accent) 9%, var(--surface));
