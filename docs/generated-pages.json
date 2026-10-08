@@ -42,7 +42,7 @@
   {
     "url": "/work/texas-unemployment/",
     "path": "work/texas-unemployment/index.html",
-    "index": true
+    "index": false
   },
   {
     "url": "/work/spotify-analysis/",

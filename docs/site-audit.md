@@ -17,7 +17,7 @@ Live homepage fetched independently on 8 October 2026: same broad design and pos
 - Game: `/connect4/`, `/connect4/training-methodology/`, `/connect4/play-transformer/`, `/connect4/play-cnn/`, `/connect4/play-policy-gradient/`, with their explicit `index.html` URLs.
 - Additional index content: ScanSense AI/Substack, Michelin restaurant text analysis/PDF, Amazonia Week/YouTube. No Texas unemployment code, dataset, report, or application in this checkout.
 - Writing: Japan's Lost Decade PDF (dated 16 April 2021 on title page), AI self-checkout article hosted on Substack (no verified date in repository).
-- Documents: 14 PDF/Excel files; include Disney memorandum and workbook, capstone artifacts, Michelin slides, study guides, and five résumé variants. Images include portrait, city photography, four Disney charts and Connect 4 logo.
+- Documents: 14 PDF/Excel files; include Disney memorandum and workbook, capstone artifacts, Michelin slides, study guides, and four résumé variants. Images include portrait, city photography, four Disney charts and Connect 4 logo.
 - External links: GitHub profile and Spotify repository, LinkedIn, Substack publication and article, YouTube seminar, Prism CDN, Substack embed script, and Connect 4 API. Exact URLs retained in inventory. A URL's presence is not proof of availability.
 
 ## Résumé protection

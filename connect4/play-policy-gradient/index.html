@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Connect 4 — Insane mode | Eshaan Arora</title><meta name="description" content="Play Connect 4 using the Policy gradient opponent route."><meta name="color-scheme" content="light dark">
-<link rel="canonical" href="https://eshaanarora.com/connect4/play-policy-gradient/"><meta property="og:url" content="https://eshaanarora.com/connect4/play-policy-gradient/"><meta property="og:title" content="Connect 4 — Insane mode | Eshaan Arora"><meta property="og:description" content="Play Connect 4 using the Policy gradient opponent route."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
+<title>Connect 4 — Insane mode | Eshaan Arora</title><meta name="description" content="Play Connect 4 against the Policy gradient opponent in Insane mode."><meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://eshaanarora.com/connect4/play-policy-gradient/"><meta property="og:url" content="https://eshaanarora.com/connect4/play-policy-gradient/"><meta property="og:title" content="Connect 4 — Insane mode | Eshaan Arora"><meta property="og:description" content="Play Connect 4 against the Policy gradient opponent in Insane mode."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
 <script src="/js/theme-init.js"></script><link rel="stylesheet" href="/css/styles.css"><script src="/js/main.js" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Connect 4 \u2014 Insane mode", "url": "https://eshaanarora.com/connect4/play-policy-gradient/"}</script>
 <link rel="stylesheet" href="/connect4/assets/connect4.css"><script src="/connect4/assets/connect4.js" defer></script></head>
@@ -10,7 +10,7 @@
 <a class="logo" href="/">Eshaan Arora<span class="logo-dot" aria-hidden="true">.</span></a>
 <nav class="site-nav" aria-label="Primary"><a href="/">Home</a><a href="/about/">About</a><a href="/work/">Work</a><a href="/writing/">Writing</a><a href="/lab/" aria-current="page">Lab</a></nav>
 <div class="header-actions"><a class="resume-link" href="/documents/eshaan-arora-resume.pdf">Résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg></span></a><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button></div>
-</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Lab / Connect 4</p><h1>Insane mode</h1><p class="lede">The existing Policy gradient opponent route. Choose who goes first, then start a game.</p></section><div class="container"><nav class="game-mode-nav" aria-label="Connect 4 modes"><a href="/connect4/">Playground</a><a href="/connect4/play-transformer/">Casual</a><a href="/connect4/play-cnn/">Challenge</a><a href="/connect4/play-policy-gradient/">Insane</a><a href="/work/connect-4-ai/">Case study</a></nav><p class="small muted">API failure uses random legal moves. Difficulty labels are not verified benchmarks. Match records stay in this browser.</p></div>
+</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Lab / Connect 4</p><h1>Insane mode</h1><p class="lede">Play against the policy gradient opponent. Choose who goes first, then make your move.</p></section><div class="container"><nav class="game-mode-nav" aria-label="Connect 4 modes"><a href="/connect4/">Playground</a><a href="/connect4/play-transformer/">Casual</a><a href="/connect4/play-cnn/">Challenge</a><a href="/connect4/play-policy-gradient/">Insane</a><a href="/work/connect-4-ai/">Case study</a></nav><p class="small muted">Your match record is saved in this browser. <a href="/connect4/training-methodology/#connection">Playing offline?</a></p></div>
     <div class="container">
 
 
@@ -49,16 +49,16 @@
           </div>
 
           <div class="connect4-stats">
-            <h3>Match record (Policy gradient API route)</h3>
+            <h3>Your match record</h3>
             <ul>
-              <li>User wins <span id="connect4-user-wins">0</span></li>
-              <li>AI wins <span id="connect4-ai-wins">0</span></li>
+              <li>Your wins <span id="connect4-user-wins">0</span></li>
+              <li>Opponent wins <span id="connect4-ai-wins">0</span></li>
               <li>Draws <span id="connect4-draws">0</span></li>
             </ul>
             <small>Combined totals across all opponents:</small>
             <ul>
-              <li>User wins <span id="connect4-total-user-wins">0</span></li>
-              <li>AI wins <span id="connect4-total-ai-wins">0</span></li>
+              <li>Your wins <span id="connect4-total-user-wins">0</span></li>
+              <li>Opponent wins <span id="connect4-total-ai-wins">0</span></li>
               <li>Draws <span id="connect4-total-draws">0</span></li>
             </ul>
           </div>
@@ -68,7 +68,7 @@
           <h2>Board</h2>
           <div class="connect4-board" id="connect4-board" role="group" aria-label="Connect 4 board"></div>
           <p class="section-subtitle" style="margin-top: var(--space-4);">
-            Tip: Click any column to drop your piece. The AI will respond automatically.
+            Select a column to drop your piece. Connect four in a row to win.
           </p>
         </section>
       </div>

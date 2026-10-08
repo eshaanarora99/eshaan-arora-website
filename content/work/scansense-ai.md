@@ -1,22 +1,20 @@
 ---
-{"title":"ScanSense AI","slug":"scansense-ai","category":"Applied ML · Computer vision","description":"An exploration of image classification for self-checkout, accompanied by an essay on the broader idea.","tools":["Computer vision","ResNet"],"status":"Article available"}
+{"title":"ScanSense AI","slug":"scansense-ai","category":"Applied ML · Computer vision","description":"Exploring how computer vision could help identify items at self-checkout.","tools":["Computer vision","ResNet"],"status":"Project & essay"}
 ---
-## Overview and problem
+## Recognizing what’s in the bag
 
-ScanSense AI explores image classification in the self-checkout setting. The original site links an essay, “Bagged, Tagged, and Identified: The Future of Self-Checkout with AI.”
+Self-checkout puts a familiar task in the shopper's hands: identify each item and get it through the checkout process. ScanSense AI explores how image classification could support that experience by recognizing products visually.
 
-## My contribution
+## The approach
 
-The existing site associates Eshaan Arora with the project and article. A fuller contribution statement needs the original project material.
+The project uses ResNet, a convolutional neural network architecture, to explore item classification. It connects a computer vision problem—recognizing an object in an image—with a practical question about the checkout experience.
 
-## Tools and methodology
+## Beyond a classification score
 
-The original summary names ResNet. Training code, dataset details, splits, and evaluation outputs are not in this website repository; architecture and deployment specifics remain unverified.
+A checkout system has to contend with unfamiliar products, packaging changes, lighting, and partially obscured items. Recognizing an image is one part of that problem; deciding what to do when the model is uncertain is another.
 
-## Results and limitations
+The accompanying essay considers the broader possibilities for AI at self-checkout and how the technology could fit into an everyday interaction.
 
-The old summary included a classification accuracy without its underlying evaluation protocol. That figure is not republished here. Accuracy on a project dataset would not by itself demonstrate checkout reliability, performance on unfamiliar products, or production readiness.
+## Read the essay
 
-## Resources
-
-[Read the original article on Substack](https://earora.substack.com/p/bagged-tagged-and-identified-the). Substack remains the canonical home of the full essay.
+[Bagged, Tagged, and Identified: The Future of Self-Checkout with AI](https://earora.substack.com/p/bagged-tagged-and-identified-the).

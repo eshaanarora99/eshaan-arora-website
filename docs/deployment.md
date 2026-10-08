@@ -2,7 +2,7 @@
 
 ## Current state
 
-No production deployment, main-branch push, production configuration overwrite, or hosting migration was performed. Generated HTML is available for review on a local redesign branch. The branch has not been pushed, so no automatic hosting preview is triggered by this task. Existing README identifies Vercel hosting, but actual dashboard settings and auto-deployment behavior need owner confirmation.
+The redesign was released to production on 8 October 2026 after explicit owner approval, through PR #16 and merge commit `e9233de1bfb254b7ba4b4333a9e488f91483b3c4`. Vercel reported a successful production deployment, and all 34 public page routes were checked. The repository-level Node.js 24 override resolved the discontinued Node.js 20 preview failure. Existing PDF downloads and the game script matched their original hashes in production. Subsequent changes use a feature branch, preview check, and reviewed merge to main.
 
 ## Hosting Node.js version
 
