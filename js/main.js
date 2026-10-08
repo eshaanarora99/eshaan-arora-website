@@ -1,60 +1,19 @@
 const themeToggle = document.querySelector('[data-theme-toggle]');
-const storedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
-
-document.documentElement.setAttribute('data-theme', initialTheme);
-if (themeToggle) {
-  themeToggle.setAttribute('aria-pressed', initialTheme === 'dark');
-}
-
-const updateToggleLabel = (theme) => {
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+const currentTheme = () => document.documentElement.dataset.theme || (systemTheme.matches ? 'dark' : 'light');
+const updateThemeControl = () => {
   if (!themeToggle) return;
-  themeToggle.querySelector('[data-theme-label]').textContent =
-    theme === 'dark' ? 'Dark' : 'Light';
+  const dark = currentTheme() === 'dark';
+  themeToggle.setAttribute('aria-pressed', String(dark));
+  themeToggle.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} theme`);
+  themeToggle.querySelector('[data-theme-label]').textContent = dark ? 'Dark' : 'Light';
 };
-
-updateToggleLabel(initialTheme);
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    themeToggle.setAttribute('aria-pressed', next === 'dark');
-    updateToggleLabel(next);
-  });
-}
-
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (!prefersReducedMotion) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  document.querySelectorAll('[data-reveal]').forEach((element) => {
-    observer.observe(element);
-  });
-}
-
-const connect4Sidebar = document.querySelector('[data-connect4-sidebar]');
-const connect4SidebarToggle = document.querySelector('[data-connect4-nav-toggle]');
-
-if (connect4Sidebar && connect4SidebarToggle) {
-  connect4SidebarToggle.addEventListener('click', () => {
-    const isCollapsed = connect4Sidebar.classList.toggle('is-collapsed');
-    connect4SidebarToggle.setAttribute('aria-expanded', String(!isCollapsed));
-    connect4SidebarToggle.textContent = isCollapsed
-      ? 'Show Connect 4 Quick Links'
-      : 'Hide Connect 4 Quick Links';
-  });
-}
+updateThemeControl();
+systemTheme.addEventListener('change', updateThemeControl);
+if (themeToggle) themeToggle.addEventListener('click', () => {
+  const next = currentTheme() === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem('theme', next); } catch { /* Theme works without storage. */ }
+  updateThemeControl();
+});
+document.querySelectorAll('[data-year]').forEach(element => { element.textContent = new Date().getFullYear(); });

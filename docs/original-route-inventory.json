@@ -1,0 +1,458 @@
+[
+  {
+    "path": "blog.html",
+    "url": "/blog.html",
+    "links": [
+      "css/styles.css",
+      "js/main.js",
+      "#main",
+      "index.html",
+      "index.html#about",
+      "index.html#experience",
+      "index.html#projects",
+      "index.html#skills",
+      "contact.html",
+      "portfolio.html",
+      "documents/japan-lost-decade.pdf",
+      "https://earora.substack.com/p/bagged-tagged-and-identified-the",
+      "https://substack.com/embedjs/embed.js",
+      "index.html",
+      "portfolio.html"
+    ],
+    "anchors": [
+      "main"
+    ]
+  },
+  {
+    "path": "bond-calculator-code.html",
+    "url": "/bond-calculator-code.html",
+    "links": [
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"
+    ],
+    "anchors": []
+  },
+  {
+    "path": "connect4/index.html",
+    "url": "/connect4/index.html",
+    "links": [
+      "/css/styles.css",
+      "/connect4/assets/connect4.css",
+      "/js/main.js",
+      "#main",
+      "/",
+      "/connect4/",
+      "/connect4/training-methodology/",
+      "/connect4/play-transformer/",
+      "/connect4/play-cnn/",
+      "/connect4/play-policy-gradient/",
+      "/index.html",
+      "/index.html#about",
+      "/index.html#experience",
+      "/index.html#projects",
+      "/index.html#skills",
+      "/contact.html",
+      "/resume.html",
+      "/connect4/images/connect-4-logo.png",
+      "/connect4/play-transformer/",
+      "/connect4/play-cnn/",
+      "/connect4/play-policy-gradient/",
+      "/connect4/training-methodology/",
+      "/index.html",
+      "/blog.html"
+    ],
+    "anchors": [
+      "connect4-nav-links",
+      "main"
+    ]
+  },
+  {
+    "path": "connect4/play-cnn/index.html",
+    "url": "/connect4/play-cnn/index.html",
+    "links": [
+      "/css/styles.css",
+      "/connect4/assets/connect4.css",
+      "/js/main.js",
+      "/connect4/assets/connect4.js",
+      "#main",
+      "/",
+      "/connect4/",
+      "/connect4/training-methodology/",
+      "/connect4/play-transformer/",
+      "/connect4/play-cnn/",
+      "/connect4/play-policy-gradient/",
+      "/index.html",
+      "/index.html#about",
+      "/index.html#experience",
+      "/index.html#projects",
+      "/index.html#skills",
+      "/contact.html",
+      "/resume.html",
+      "/index.html",
+      "/blog.html"
+    ],
+    "anchors": [
+      "connect4-nav-links",
+      "main",
+      "connect4-start",
+      "connect4-reset",
+      "connect4-resign",
+      "connect4-status",
+      "connect4-user-color",
+      "connect4-ai-color",
+      "connect4-user-wins",
+      "connect4-ai-wins",
+      "connect4-draws",
+      "connect4-total-user-wins",
+      "connect4-total-ai-wins",
+      "connect4-total-draws",
+      "connect4-board"
+    ]
+  },
+  {
+    "path": "connect4/play-policy-gradient/index.html",
+    "url": "/connect4/play-policy-gradient/index.html",
+    "links": [
+      "/css/styles.css",
+      "/connect4/assets/connect4.css",
+      "/js/main.js",
+      "/connect4/assets/connect4.js",
+      "#main",
+      "/",
+      "/connect4/",
+      "/connect4/training-methodology/",
+      "/connect4/play-transformer/",
+      "/connect4/play-cnn/",
+      "/connect4/play-policy-gradient/",
+      "/index.html",
+      "/index.html#about",
+      "/index.html#experience",
+      "/index.html#projects",
+      "/index.html#skills",
+      "/contact.html",
+      "/resume.html",
+      "/index.html",
+      "/blog.html"
+    ],
+    "anchors": [
+      "connect4-nav-links",
+      "main",
+      "connect4-start",
+      "connect4-reset",
+      "connect4-resign",
+      "connect4-status",
+      "connect4-user-color",
+      "connect4-ai-color",
+      "connect4-user-wins",
+      "connect4-ai-wins",
+      "connect4-draws",
+      "connect4-total-user-wins",
+      "connect4-total-ai-wins",
+      "connect4-total-draws",
+      "connect4-board"
+    ]
+  },
+  {
+    "path": "connect4/play-transformer/index.html",
+    "url": "/connect4/play-transformer/index.html",
+    "links": [
+      "/css/styles.css",
+      "/connect4/assets/connect4.css",
+      "/js/main.js",
+      "/connect4/assets/connect4.js",
+      "#main",
+      "/",
+      "/connect4/",
+      "/connect4/training-methodology/",
+      "/connect4/play-transformer/",
+      "/connect4/play-cnn/",
+      "/connect4/play-policy-gradient/",
+      "/index.html",
+      "/index.html#about",
+      "/index.html#experience",
+      "/index.html#projects",
+      "/index.html#skills",
+      "/contact.html",
+      "/resume.html",
+      "/index.html",
+      "/blog.html"
+    ],
+    "anchors": [
+      "connect4-nav-links",
+      "main",
+      "connect4-start",
+      "connect4-reset",
+      "connect4-resign",
+      "connect4-status",
+      "connect4-user-color",
+      "connect4-ai-color",
+      "connect4-user-wins",
+      "connect4-ai-wins",
+      "connect4-draws",
+      "connect4-total-user-wins",
+      "connect4-total-ai-wins",
+      "connect4-total-draws",
+      "connect4-board"
+    ]
+  },
+  {
+    "path": "connect4/training-methodology/index.html",
+    "url": "/connect4/training-methodology/index.html",
+    "links": [
+      "/css/styles.css",
+      "/connect4/assets/connect4.css",
+      "/js/main.js",
+      "#main",
+      "/",
+      "/connect4/",
+      "/connect4/training-methodology/",
+      "/connect4/play-transformer/",
+      "/connect4/play-cnn/",
+      "/connect4/play-policy-gradient/",
+      "/index.html",
+      "/index.html#about",
+      "/index.html#experience",
+      "/index.html#projects",
+      "/index.html#skills",
+      "/contact.html",
+      "/resume.html",
+      "/index.html",
+      "/blog.html"
+    ],
+    "anchors": [
+      "connect4-nav-links",
+      "main"
+    ]
+  },
+  {
+    "path": "contact.html",
+    "url": "/contact.html",
+    "links": [
+      "css/styles.css",
+      "js/main.js",
+      "#main",
+      "index.html",
+      "index.html#about",
+      "index.html#experience",
+      "index.html#projects",
+      "index.html#skills",
+      "contact.html",
+      "resume.html",
+      "mailto:eshaan.arora@utexas.edu",
+      "https://www.linkedin.com/in/e-arora/",
+      "https://www.github.com/eshaanarora99/",
+      "https://earora.substack.com",
+      "index.html",
+      "portfolio.html"
+    ],
+    "anchors": [
+      "main"
+    ]
+  },
+  {
+    "path": "disney-analysis.html",
+    "url": "/disney-analysis.html",
+    "links": [
+      "styles.css",
+      "documents/DIS-Memo.pdf",
+      "documents/dis_fcffsimpleginzu.xlsx",
+      "images/DIS_EV_to_Equity_Bridge.png",
+      "images/DIS_FCFF_Projection.png",
+      "images/DIS_PV_Composition.png",
+      "images/DIS_Sensitivity_WACC.png"
+    ],
+    "anchors": []
+  },
+  {
+    "path": "index.html",
+    "url": "/index.html",
+    "links": [
+      "css/styles.css",
+      "js/main.js",
+      "#main",
+      "index.html",
+      "#about",
+      "#experience",
+      "#projects",
+      "#skills",
+      "#contact",
+      "/connect4/",
+      "resume.html",
+      "#projects",
+      "contact.html",
+      "images/headshot.jpeg",
+      "disney-analysis.html",
+      "documents/DIS-Memo.pdf",
+      "documents/dis_fcffsimpleginzu.xlsx",
+      "spotify-data-analysis.html",
+      "bond-calculator-code.html",
+      "present-future-value-calculator.html",
+      "stock_quotes.html",
+      "portfolio.html#amazonia",
+      "https://open.substack.com/pub/earora/p/bagged-tagged-and-identified-the?r=1by0ez&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false",
+      "documents/Unstructured-Group-Project.pdf",
+      "mailto:eshaan.arora@utexas.edu",
+      "https://www.linkedin.com/in/e-arora/",
+      "https://www.github.com/eshaanarora99/",
+      "https://earora.substack.com",
+      "portfolio.html",
+      "blog.html"
+    ],
+    "anchors": [
+      "main",
+      "about",
+      "experience",
+      "projects",
+      "skills",
+      "contact"
+    ]
+  },
+  {
+    "path": "market_dashboard.html",
+    "url": "/market_dashboard.html",
+    "links": [
+      "css/styles.css",
+      "index.html",
+      "images/headshot.jpeg",
+      "index.html",
+      "resume.html",
+      "portfolio.html",
+      "blog.html",
+      "contact.html"
+    ],
+    "anchors": []
+  },
+  {
+    "path": "msba-capstone/index.html",
+    "url": "/msba-capstone/index.html",
+    "links": [
+      "../css/styles.css",
+      "../js/main.js",
+      "#main",
+      "../index.html",
+      "../index.html#about",
+      "../index.html#experience",
+      "../index.html#projects",
+      "../index.html#skills",
+      "../contact.html",
+      "../resume.html",
+      "../documents/product-manager-note.pdf",
+      "../documents/algorithmics-final-presentation.pdf",
+      "../index.html",
+      "../portfolio.html"
+    ],
+    "anchors": [
+      "main",
+      "project-overview-title",
+      "pm-note-title"
+    ]
+  },
+  {
+    "path": "portfolio.html",
+    "url": "/portfolio.html",
+    "links": [
+      "css/styles.css",
+      "js/main.js",
+      "#main",
+      "index.html",
+      "index.html#about",
+      "index.html#experience",
+      "index.html#projects",
+      "index.html#skills",
+      "contact.html",
+      "resume.html",
+      "disney-analysis.html",
+      "documents/DIS-Memo.pdf",
+      "documents/dis_fcffsimpleginzu.xlsx",
+      "spotify-data-analysis.html",
+      "bond-calculator-code.html",
+      "present-future-value-calculator.html",
+      "stock_quotes.html",
+      "https://www.youtube.com/embed/EAqpm_oeSso?si=Xn71wQXZo6q4naqC",
+      "https://open.substack.com/pub/earora/p/bagged-tagged-and-identified-the?r=1by0ez&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false",
+      "documents/Unstructured-Group-Project.pdf",
+      "index.html",
+      "blog.html"
+    ],
+    "anchors": [
+      "main",
+      "amazonia"
+    ]
+  },
+  {
+    "path": "present-future-value-calculator.html",
+    "url": "/present-future-value-calculator.html",
+    "links": [
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"
+    ],
+    "anchors": []
+  },
+  {
+    "path": "resume.html",
+    "url": "/resume.html",
+    "links": [
+      "css/styles.css",
+      "js/main.js",
+      "#main",
+      "index.html",
+      "index.html#about",
+      "index.html#experience",
+      "index.html#projects",
+      "index.html#skills",
+      "contact.html",
+      "/connect4/",
+      "portfolio.html",
+      "documents/eshaan-arora-resume.pdf",
+      "documents/eshaan-arora-resume.pdf",
+      "index.html",
+      "portfolio.html"
+    ],
+    "anchors": [
+      "main"
+    ]
+  },
+  {
+    "path": "spotify-data-analysis.html",
+    "url": "/spotify-data-analysis.html",
+    "links": [
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css",
+      "https://github.com/eshaanarora99/Spotify_Data_Analysis",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"
+    ],
+    "anchors": []
+  },
+  {
+    "path": "square-apm-portfolio/index.html",
+    "url": "/square-apm-portfolio/index.html",
+    "links": [
+      "../css/styles.css",
+      "../js/main.js",
+      "../index.html",
+      "#about",
+      "#experience",
+      "#projects",
+      "#skills",
+      "#contact",
+      "../resume.html",
+      "../msba-capstone/index.html",
+      "../connect4/index.html"
+    ],
+    "anchors": [
+      "main"
+    ]
+  },
+  {
+    "path": "stock_quotes.html",
+    "url": "/stock_quotes.html",
+    "links": [
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"
+    ],
+    "anchors": []
+  }
+]

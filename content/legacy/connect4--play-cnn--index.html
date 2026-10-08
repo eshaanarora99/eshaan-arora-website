@@ -1,0 +1,67 @@
+
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h1 class="section-title">Play Challenge Mode</h1>
+        <p class="section-subtitle">Play a competitive game against our bespoke CNN-based model and keep track of your results.</p>
+      </div>
+
+
+
+      <div class="connect4-layout">
+        <section class="card connect4-panel" aria-label="Game controls">
+          <h2>Game setup</h2>
+          <p>Choose whether you go first or second before starting the game.</p>
+
+          <div class="connect4-choice">
+            <label>
+              <input type="radio" name="first-move" value="user" checked>
+              I go first (Red)
+            </label>
+            <br>
+            <label>
+              <input type="radio" name="first-move" value="ai">
+              AI goes first (Red)
+            </label>
+          </div>
+
+          <div class="connect4-actions">
+            <button class="button button-primary" id="connect4-start" type="button">Start Game</button>
+            <button class="button button-secondary" id="connect4-reset" type="button">Reset</button>
+            <button class="button button-secondary" id="connect4-resign" type="button">Resign</button>
+          </div>
+
+          <div class="connect4-status" id="connect4-status" aria-live="polite">
+            Choose who goes first, then start the game.
+          </div>
+
+          <div class="connect4-colors">
+            <p><strong>Your color:</strong> <span id="connect4-user-color">Red</span></p>
+            <p><strong>AI color:</strong> <span id="connect4-ai-color">Blue</span></p>
+          </div>
+
+          <div class="connect4-stats">
+            <h3>Match record (CNN opponent)</h3>
+            <ul>
+              <li>User wins <span id="connect4-user-wins">0</span></li>
+              <li>AI wins <span id="connect4-ai-wins">0</span></li>
+              <li>Draws <span id="connect4-draws">0</span></li>
+            </ul>
+            <small>Combined totals across all opponents:</small>
+            <ul>
+              <li>User wins <span id="connect4-total-user-wins">0</span></li>
+              <li>AI wins <span id="connect4-total-ai-wins">0</span></li>
+              <li>Draws <span id="connect4-total-draws">0</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card connect4-board-section" aria-label="Connect 4 board">
+          <h2>Board</h2>
+          <div class="connect4-board" id="connect4-board" role="grid" aria-label="Connect 4 board"></div>
+          <p class="section-subtitle" style="margin-top: var(--space-4);">
+            Tip: Click any column to drop your piece. The AI will respond automatically.
+          </p>
+        </section>
+      </div>
+    </div>
+

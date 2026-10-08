@@ -1,0 +1,172 @@
+[
+  {
+    "url": "/",
+    "path": "index.html",
+    "index": true
+  },
+  {
+    "url": "/about/",
+    "path": "about/index.html",
+    "index": true
+  },
+  {
+    "url": "/work/",
+    "path": "work/index.html",
+    "index": true
+  },
+  {
+    "url": "/writing/",
+    "path": "writing/index.html",
+    "index": true
+  },
+  {
+    "url": "/lab/",
+    "path": "lab/index.html",
+    "index": true
+  },
+  {
+    "url": "/work/connect-4-ai/",
+    "path": "work/connect-4-ai/index.html",
+    "index": true
+  },
+  {
+    "url": "/work/financial-ai-assistant/",
+    "path": "work/financial-ai-assistant/index.html",
+    "index": true
+  },
+  {
+    "url": "/work/disney-valuation/",
+    "path": "work/disney-valuation/index.html",
+    "index": true
+  },
+  {
+    "url": "/work/texas-unemployment/",
+    "path": "work/texas-unemployment/index.html",
+    "index": true
+  },
+  {
+    "url": "/work/spotify-analysis/",
+    "path": "work/spotify-analysis/index.html",
+    "index": true
+  },
+  {
+    "url": "/work/scansense-ai/",
+    "path": "work/scansense-ai/index.html",
+    "index": true
+  },
+  {
+    "url": "/work/michelin-analysis/",
+    "path": "work/michelin-analysis/index.html",
+    "index": true
+  },
+  {
+    "url": "/writing/japans-lost-decade/",
+    "path": "writing/japans-lost-decade/index.html",
+    "index": true
+  },
+  {
+    "url": "/writing/finance-study-notes/",
+    "path": "writing/finance-study-notes/index.html",
+    "index": true
+  },
+  {
+    "url": "/connect4/",
+    "path": "connect4/index.html",
+    "index": true
+  },
+  {
+    "url": "/connect4/play-transformer/",
+    "path": "connect4/play-transformer/index.html",
+    "index": true
+  },
+  {
+    "url": "/connect4/play-cnn/",
+    "path": "connect4/play-cnn/index.html",
+    "index": true
+  },
+  {
+    "url": "/connect4/play-policy-gradient/",
+    "path": "connect4/play-policy-gradient/index.html",
+    "index": true
+  },
+  {
+    "url": "/connect4/training-methodology/",
+    "path": "connect4/training-methodology/index.html",
+    "index": true
+  },
+  {
+    "url": "/lab/financial-tools/",
+    "path": "lab/financial-tools/index.html",
+    "index": true
+  },
+  {
+    "url": "/bond-calculator-code.html",
+    "path": "bond-calculator-code.html",
+    "index": true
+  },
+  {
+    "url": "/present-future-value-calculator.html",
+    "path": "present-future-value-calculator.html",
+    "index": true
+  },
+  {
+    "url": "/stock_quotes.html",
+    "path": "stock_quotes.html",
+    "index": true
+  },
+  {
+    "url": "/lab/spotify-source/",
+    "path": "lab/spotify-source/index.html",
+    "index": true
+  },
+  {
+    "url": "/lab/archive/",
+    "path": "lab/archive/index.html",
+    "index": true
+  },
+  {
+    "url": "/market_dashboard.html",
+    "path": "market_dashboard.html",
+    "index": true
+  },
+  {
+    "url": "/portfolio.html",
+    "path": "portfolio.html",
+    "index": false
+  },
+  {
+    "url": "/blog.html",
+    "path": "blog.html",
+    "index": false
+  },
+  {
+    "url": "/disney-analysis.html",
+    "path": "disney-analysis.html",
+    "index": false
+  },
+  {
+    "url": "/spotify-data-analysis.html",
+    "path": "spotify-data-analysis.html",
+    "index": false
+  },
+  {
+    "url": "/msba-capstone/",
+    "path": "msba-capstone/index.html",
+    "index": false
+  },
+  {
+    "url": "/square-apm-portfolio/",
+    "path": "square-apm-portfolio/index.html",
+    "index": false
+  },
+  {
+    "url": "/resume.html",
+    "path": "resume.html",
+    "index": true
+  },
+  {
+    "url": "/contact.html",
+    "path": "contact.html",
+    "index": true
+  }
+]

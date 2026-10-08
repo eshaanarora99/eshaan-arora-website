@@ -1,0 +1,747 @@
+{
+  "page_checks": [
+    {
+      "url": "/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/about/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/writing/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/lab/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/connect-4-ai/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/financial-ai-assistant/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/disney-valuation/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/texas-unemployment/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/spotify-analysis/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/scansense-ai/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/michelin-analysis/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/writing/japans-lost-decade/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/writing/finance-study-notes/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-transformer/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-cnn/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-policy-gradient/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/training-methodology/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/lab/financial-tools/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/bond-calculator-code.html",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/present-future-value-calculator.html",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/stock_quotes.html",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/lab/spotify-source/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/lab/archive/",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/market_dashboard.html",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/resume.html",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/contact.html",
+      "theme": "light",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/about/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/writing/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/lab/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/connect-4-ai/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/financial-ai-assistant/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/disney-valuation/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/texas-unemployment/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/spotify-analysis/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/scansense-ai/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/michelin-analysis/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/writing/japans-lost-decade/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/writing/finance-study-notes/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-transformer/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-cnn/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-policy-gradient/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/training-methodology/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/lab/financial-tools/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/bond-calculator-code.html",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/present-future-value-calculator.html",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/stock_quotes.html",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/lab/spotify-source/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/lab/archive/",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/market_dashboard.html",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/resume.html",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/contact.html",
+      "theme": "light",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/about/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/writing/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/lab/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/connect-4-ai/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/financial-ai-assistant/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/disney-valuation/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/texas-unemployment/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/spotify-analysis/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/scansense-ai/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/work/michelin-analysis/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/writing/japans-lost-decade/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/writing/finance-study-notes/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-transformer/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-cnn/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-policy-gradient/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/training-methodology/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/lab/financial-tools/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/bond-calculator-code.html",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/present-future-value-calculator.html",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/stock_quotes.html",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/lab/spotify-source/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/lab/archive/",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/market_dashboard.html",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/resume.html",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/contact.html",
+      "theme": "dark",
+      "viewport": "desktop",
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/about/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/writing/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/lab/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/connect-4-ai/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/financial-ai-assistant/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/disney-valuation/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/texas-unemployment/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/spotify-analysis/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/scansense-ai/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/work/michelin-analysis/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/writing/japans-lost-decade/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/writing/finance-study-notes/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-transformer/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-cnn/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/play-policy-gradient/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/connect4/training-methodology/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/lab/financial-tools/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/bond-calculator-code.html",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/present-future-value-calculator.html",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/stock_quotes.html",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/lab/spotify-source/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/lab/archive/",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/market_dashboard.html",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/resume.html",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    },
+    {
+      "url": "/contact.html",
+      "theme": "dark",
+      "viewport": "mobile",
+      "overflow": false
+    }
+  ],
+  "game_checks": [
+    {
+      "mode": "transformer",
+      "board": 42,
+      "user_first_encoding": true,
+      "ai_first_encoding": true,
+      "vertical_win": true,
+      "persistence": true,
+      "resign_reset": true
+    },
+    {
+      "mode": "cnn",
+      "board": 42,
+      "user_first_encoding": true,
+      "ai_first_encoding": true,
+      "vertical_win": true,
+      "persistence": true,
+      "resign_reset": true
+    },
+    {
+      "mode": "pg",
+      "board": 42,
+      "user_first_encoding": true,
+      "ai_first_encoding": true,
+      "vertical_win": true,
+      "persistence": true,
+      "resign_reset": true
+    },
+    {
+      "fallback": "failure",
+      "legal_move": true
+    },
+    {
+      "fallback": "invalid",
+      "legal_move": true
+    }
+  ],
+  "compatibility": [
+    {
+      "old": "/portfolio.html#amazonia",
+      "destination": "/work/#amazonia",
+      "passed": true
+    },
+    {
+      "old": "/blog.html",
+      "destination": "/writing/",
+      "passed": true
+    },
+    {
+      "old": "/disney-analysis.html",
+      "destination": "/work/disney-valuation/",
+      "passed": true
+    },
+    {
+      "old": "/spotify-data-analysis.html",
+      "destination": "/work/spotify-analysis/",
+      "passed": true
+    },
+    {
+      "old": "/msba-capstone/index.html",
+      "destination": "/work/financial-ai-assistant/",
+      "passed": true
+    },
+    {
+      "old": "/square-apm-portfolio/",
+      "destination": "/work/",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "accessibility": []
+}

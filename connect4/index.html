@@ -1,122 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connect 4 Project | Eshaan Arora</title>
-  <meta name="description" content="Connect 4 project landing page featuring gameplay and training methodology.">
-  <meta property="og:title" content="Connect 4 Project | Eshaan Arora">
-  <meta property="og:description" content="Explore the Connect 4 game!">
-  <meta property="og:image" content="/images/headshot.jpeg">
-  <meta property="og:type" content="website">
-  <meta name="color-scheme" content="light dark">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/connect4/assets/connect4.css">
-  <script src="/js/main.js" defer></script>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect 4 Playground | Eshaan Arora</title><meta name="description" content="Choose one of three Connect 4 opponent modes and play in your browser."><meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://eshaanarora.com/connect4/"><meta property="og:url" content="https://eshaanarora.com/connect4/"><meta property="og:title" content="Connect 4 Playground | Eshaan Arora"><meta property="og:description" content="Choose one of three Connect 4 opponent modes and play in your browser."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
+<script src="/js/theme-init.js"></script><link rel="stylesheet" href="/css/styles.css"><script src="/js/main.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Connect 4 Playground", "url": "https://eshaanarora.com/connect4/"}</script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <nav class="connect4-nav" aria-label="Connect 4 quick links" data-connect4-sidebar>
-    <button class="connect4-nav-toggle" type="button" data-connect4-nav-toggle aria-expanded="true" aria-controls="connect4-nav-links">
-      Hide Connect 4 Quick Links
-    </button>
-    <div class="connect4-nav-panel">
-      <p class="connect4-nav-title">Explore the Connect 4 World!</p>
-      <div class="connect4-nav-links" id="connect4-nav-links">
-        <a class="button button-secondary" href="/">Back to the Main Portfolio Website</a>
-        <a class="button button-secondary" href="/connect4/">Back to the Game's Homepage</a>
-        <a class="button button-secondary" href="/connect4/training-methodology/">How the Game Works</a>
-        <a class="button button-secondary" href="/connect4/play-transformer/">Play the Game in Casual Mode</a>
-        <a class="button button-secondary" href="/connect4/play-cnn/">Play the Game in Challenge Mode</a>
-        <a class="button button-secondary" href="/connect4/play-policy-gradient/">Play the Game in Insane Mode</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="site-header">
-    <div class="container nav-bar">
-      <a class="logo" href="/index.html">Eshaan Arora</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="/index.html#about">About</a>
-        <a href="/index.html#experience">Experience</a>
-        <a href="/index.html#projects">Projects</a>
-        <a href="/index.html#skills">Skills</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a class="button button-secondary" href="/resume.html">Resume</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
-          <span aria-hidden="true">◐</span>
-          <span data-theme-label>Light</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div data-reveal class="reveal">
-          <p class="section-subtitle">Connect 4 Game · Casual, Free-to-Play · Powered by Machine Learning</p>
-          <h1>Connect 4: Playable AI opponents!</h1>
-          <p>
-            This project is a fully playable, end-to-end AI implementation of Connect 4, designed
-            to explore how different modeling approaches translate into real gameplay.
-            The system was trained on a large, strategically diverse dataset generated using
-            Monte Carlo Tree Search, allowing the AI to learn optimal move selection across a wide range of board states.
-            Two distinct models power the game: a convolutional neural network optimized for fast, consistent play, and
-            a transformer-based model designed to reason over broader board patterns. Both models are deployed on a cloud backend and
-            integrated into a live web interface, enabling real-time play and comparison. Beyond model accuracy, the project
-            emphasizes product trade-offs—responsiveness, difficulty, and user experience—demonstrating how AI design decisions
-            surface directly in an interactive game environment.
-          </p>
-        </div>
-        <div class="hero-card" data-reveal>
-          <div class="connect4-hero-placeholder" aria-label="Connect 4 image">
-            <img src="/connect4/images/connect-4-logo.png" alt="Connect 4 logo">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <h2 class="section-title">What you can explore</h2>
-          <p class="section-subtitle">Our Casual, Challenge, and Insane Mode Opponents, how the game works, and more!</p>
-        </div>
-        <div class="grid-2">
-          <article class="card reveal" data-reveal>
-            <h3>Play the AI opponents</h3>
-            <p>
-              Jump into a game against our AI models and see
-              how each model behaves in real time.
-            </p>
-            <div class="project-links">
-              <a href="/connect4/play-transformer/">Play in Casual Mode</a>
-              <a href="/connect4/play-cnn/">Play in Challenge Mode</a>
-              <a href="/connect4/play-policy-gradient/">Play in Insane Mode</a>
-            </div>
-          </article>
-          <article class="card reveal" data-reveal>
-            <h3>How the AI Opponents Work</h3>
-            <p>
-              Learn how the system is designed, trained, and evaluated—and how those decisions shape gameplay and user experience.
-            </p>
-            <div class="project-links">
-              <a href="/connect4/training-methodology/">View the product notes</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Eshaan Arora · <a href="/index.html">Home</a> · <a href="/blog.html">Blog</a></p>
-    </div>
-  </footer>
-</body>
-</html>
+<body ><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-bar">
+<a class="logo" href="/">Eshaan Arora<span class="logo-dot" aria-hidden="true">.</span></a>
+<nav class="site-nav" aria-label="Primary"><a href="/">Home</a><a href="/about/">About</a><a href="/work/">Work</a><a href="/writing/">Writing</a><a href="/lab/" aria-current="page">Lab</a></nav>
+<div class="header-actions"><a class="resume-link" href="/documents/eshaan-arora-resume.pdf">Résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg></span></a><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button></div>
+</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Lab / Connect 4</p><h1>Your move.</h1><p class="lede">Choose an opponent route, take a seat, and connect four. The familiar rules make space for a different kind of AI experiment.</p></section><section class="container section"><nav class="game-mode-nav" aria-label="Connect 4 modes"><a href="/connect4/">Playground</a><a href="/connect4/play-transformer/">Casual</a><a href="/connect4/play-cnn/">Challenge</a><a href="/connect4/play-policy-gradient/">Insane</a><a href="/work/connect-4-ai/">Case study</a></nav><div class="mode-grid"><article class="lab-card"><p class="eyebrow">Transformer route</p><h2>Casual mode</h2><p>Play the existing Transformer API opponent. Mode names are inherited labels; comparative strength is not benchmarked here.</p><a class="button button-primary" href="/connect4/play-transformer/">Play casual →</a></article><article class="lab-card"><p class="eyebrow">CNN route</p><h2>Challenge mode</h2><p>Play the existing CNN API opponent. Mode names are inherited labels; comparative strength is not benchmarked here.</p><a class="button button-primary" href="/connect4/play-cnn/">Play challenge →</a></article><article class="lab-card"><p class="eyebrow">Policy gradient route</p><h2>Insane mode</h2><p>Play the existing Policy gradient API opponent. Mode names are inherited labels; comparative strength is not benchmarked here.</p><a class="button button-primary" href="/connect4/play-policy-gradient/">Play insane →</a></article></div><p class="notice">Service note: if the API request fails, the existing client uses random legal moves. Model code and training records are hosted separately and are not in this repository.</p><p><a href="/connect4/training-methodology/">How the interface works →</a></p></section></main><footer class="footer"><div class="container footer-inner"><p>© <span data-year>2026</span> Eshaan Arora</p><nav aria-label="Contact and social links"><a href="mailto:eshaan.arora@utexas.edu">Email</a><a href="https://github.com/eshaanarora99">GitHub</a><a href="https://www.linkedin.com/in/e-arora/">LinkedIn</a><a href="https://earora.substack.com">Substack</a></nav><a href="#main">Back to top ↑</a></div></footer></body></html>

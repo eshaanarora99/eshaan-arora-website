@@ -1,0 +1,49 @@
+{
+  "redirects": [
+    {
+      "source": "/portfolio.html",
+      "destination": "/work/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/writing/",
+      "permanent": true
+    },
+    {
+      "source": "/disney-analysis.html",
+      "destination": "/work/disney-valuation/",
+      "permanent": true
+    },
+    {
+      "source": "/spotify-data-analysis.html",
+      "destination": "/work/spotify-analysis/",
+      "permanent": true
+    },
+    {
+      "source": "/msba-capstone",
+      "destination": "/work/financial-ai-assistant/",
+      "permanent": true
+    },
+    {
+      "source": "/square-apm-portfolio",
+      "destination": "/work/",
+      "permanent": true
+    },
+    {
+      "source": "/msba-capstone/index.html",
+      "destination": "/work/financial-ai-assistant/",
+      "permanent": true
+    },
+    {
+      "source": "/square-apm-portfolio/index.html",
+      "destination": "/work/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

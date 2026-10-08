@@ -1,0 +1,2 @@
+# Authoring only; the deployed site has no Python runtime.
+Markdown==3.8.2
