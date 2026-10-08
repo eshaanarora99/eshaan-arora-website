@@ -1,133 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Present Value or Future Value Calculator - Eshaan Arora</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        header {
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        pre {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 8px;
-            overflow-x: auto;
-        }
-        h2 {
-            text-align: center; /* Center the heading */
-        }
-    </style>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PV/FV — Archived Python | Eshaan Arora</title><meta name="description" content="Preserved local Python source for reference; not an interactive browser application."><meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://eshaanarora.com/present-future-value-calculator.html"><meta property="og:url" content="https://eshaanarora.com/present-future-value-calculator.html"><meta property="og:title" content="PV/FV — Archived Python | Eshaan Arora"><meta property="og:description" content="Preserved local Python source for reference; not an interactive browser application."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
+<script src="/js/theme-init.js"></script><link rel="stylesheet" href="/css/styles.css"><script src="/js/main.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "PV/FV \u2014 Archived Python", "url": "https://eshaanarora.com/present-future-value-calculator.html"}</script>
 </head>
-<body>
-
-    <header>
-        <h1>Present Value or Future Value Calculator</h1>
-    </header>
-
-    <div class="container">
-        <h2>Code for Present Value or Future Value Calculator</h2>
-        <pre><code class="language-python">
-def get_initial_value():
+<body ><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-bar">
+<a class="logo" href="/">Eshaan Arora<span class="logo-dot" aria-hidden="true">.</span></a>
+<nav class="site-nav" aria-label="Primary"><a href="/">Home</a><a href="/about/">About</a><a href="/work/">Work</a><a href="/writing/">Writing</a><a href="/lab/" aria-current="page">Lab</a></nav>
+<div class="header-actions"><a class="resume-link" href="/documents/eshaan-arora-resume.pdf">Résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg></span></a><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button></div>
+</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Lab / Archived source</p><h1>PV/FV — Archived Python</h1><p class="lede">The original local Python program, preserved for reference. This page does not execute the program.</p></section><article class="container reading prose"><p class="notice">Archived source, not a live application. Dependencies and local configuration are required; this program has not been newly validated. The original PV/FV multiphase logic needs a formula review.</p><p><a href="/content/sources/present-future-value.py" download>Download Python source</a> · <a href="/lab/financial-tools/">Browser financial tools</a></p><pre tabindex="0" aria-label="Code sample"><code class="language-python">def get_initial_value():
     while True:
-        value = input("Please enter the value to calculate PV/FV for: ")
+        value = input(&quot;Please enter the value to calculate PV/FV for: &quot;)
         try:
             return float(value)
         except ValueError:
-            print("Please enter a valid number!")
+            print(&quot;Please enter a valid number!&quot;)
 
 def get_pfVal():
-    pfVal = input("Hello! Would you like to calculate Present Value or Future Value? Enter 0 for PV and 1 for FV: ")
-    
-    if pfVal == '0' or pfVal == '1':
+    pfVal = input(&quot;Hello! Would you like to calculate Present Value or Future Value? Enter 0 for PV and 1 for FV: &quot;)
+
+    if pfVal == &#x27;0&#x27; or pfVal == &#x27;1&#x27;:
         return pfVal
     else:
-        print("Sorry, please enter 0 or 1!")
+        print(&quot;Sorry, please enter 0 or 1!&quot;)
         return get_pfVal()
-    
+
 def get_periods():
-    periods = input("How many discrete periods are there? Response: ")
+    periods = input(&quot;How many discrete periods are there? Response: &quot;)
     try:
         periods = int(periods)
         return periods
     except ValueError:
-        print("Sorry, please enter a valid integer! Try again.")
+        print(&quot;Sorry, please enter a valid integer! Try again.&quot;)
         return get_periods()
-    
+
 def get_phases():
-    phases = input("Enter the number of discrete growth phases (including 'none'): ").lower()
-     
-    if phases == "none":
+    phases = input(&quot;Enter the number of discrete growth phases (including &#x27;none&#x27;): &quot;).lower()
+
+    if phases == &quot;none&quot;:
         return 0
-    
+
     else:
         try:
             phases = int(phases)
-            if phases >= 0:
+            if phases &gt;= 0:
                 return phases
             else:
-                print("Sorry, please enter a non-negative integer or the word 'none'.")
+                print(&quot;Sorry, please enter a non-negative integer or the word &#x27;none&#x27;.&quot;)
                 return get_phases()
-            
+
         except ValueError:
-            print("Sorry, please enter a valid integer or the word 'none'.")
+            print(&quot;Sorry, please enter a valid integer or the word &#x27;none&#x27;.&quot;)
             return get_phases()
-    
+
 def phaseData(phaseCount):
     phaseGrowth = []
     for i in range(phaseCount):
-        growthRate = input("Input the growth rate for phase " + str(i+1) + " as a percentage (i.e., enter '6' for a rate of 6%): ")
+        growthRate = input(&quot;Input the growth rate for phase &quot; + str(i+1) + &quot; as a percentage (i.e., enter &#x27;6&#x27; for a rate of 6%): &quot;)
         try:
             growthRate = float(growthRate)
         except ValueError:
-            print("Please enter a valid number for the growth rate.")
+            print(&quot;Please enter a valid number for the growth rate.&quot;)
             return phaseData(phaseCount)
-        
-        length = input("Enter the length of phase " + str(i + 1) + " in periods: ")
+
+        length = input(&quot;Enter the length of phase &quot; + str(i + 1) + &quot; in periods: &quot;)
         try:
             length = int(length)
         except ValueError:
-            print("Please enter a valid integer for the length of the phase.")
+            print(&quot;Please enter a valid integer for the length of the phase.&quot;)
             return phaseData(phaseCount)
-        
+
         if i == phaseCount - 1:
-            ap = input("For the final phase of this problem, is it an annuity or perpetuity? Enter 'A' for annuity or 'P' for perpetuity: ").upper()
-            if ap not in ["A", "P"]:
-                print("Please enter 'A' for annuity or 'P' for perpetuity.")
+            ap = input(&quot;For the final phase of this problem, is it an annuity or perpetuity? Enter &#x27;A&#x27; for annuity or &#x27;P&#x27; for perpetuity: &quot;).upper()
+            if ap not in [&quot;A&quot;, &quot;P&quot;]:
+                print(&quot;Please enter &#x27;A&#x27; for annuity or &#x27;P&#x27; for perpetuity.&quot;)
                 return phaseData(phaseCount)
-            
+
             phaseGrowth.append({
-                'growthRate': growthRate,
-                'length': length,
-                'type': ap
+                &#x27;growthRate&#x27;: growthRate,
+                &#x27;length&#x27;: length,
+                &#x27;type&#x27;: ap
             })
         else:
             phaseGrowth.append({
-                'growthRate': growthRate,
-                'length': length,
-                'type' : 'A'
+                &#x27;growthRate&#x27;: growthRate,
+                &#x27;length&#x27;: length,
+                &#x27;type&#x27; : &#x27;A&#x27;
             })
-    
+
     return phaseGrowth
 
 def get_rate():
-    rate = input("Please enter the discount rate percentage value (i.e., enter '6' for a rate of 6%): ")
+    rate = input(&quot;Please enter the discount rate percentage value (i.e., enter &#x27;6&#x27; for a rate of 6%): &quot;)
     try:
         rate = float(rate)
         return rate
     except ValueError:
-        print("Please enter a VALID discount rate!")
+        print(&quot;Please enter a VALID discount rate!&quot;)
         return get_rate()
-    
+
 def presentValue(fv, rate, periods):
     return fv / ((1 + rate/100) ** periods)
 
@@ -139,59 +112,59 @@ def annuityPV(cashFlow, rate, periods):
 
 def perpetuityPV(cashFlow, rate):
     return cashFlow / (rate/100)
-    
+
 
 def main():
     pfVal = get_pfVal()
 
-    if pfVal == '0':
-        print("You are calculating Present Value.")
+    if pfVal == &#x27;0&#x27;:
+        print(&quot;You are calculating Present Value.&quot;)
     else:
-        print("You are calculating Future Value.")
+        print(&quot;You are calculating Future Value.&quot;)
 
     initialValue = get_initial_value()
-    print("You entered an initial value of ", initialValue, ".")
+    print(&quot;You entered an initial value of &quot;, initialValue, &quot;.&quot;)
 
     periods = get_periods()
-    print("You entered", periods, "discrete forecast periods.")
+    print(&quot;You entered&quot;, periods, &quot;discrete forecast periods.&quot;)
 
     phases = get_phases()
-    print("You entered", phases, "distinct growth period(s)")
+    print(&quot;You entered&quot;, phases, &quot;distinct growth period(s)&quot;)
 
-    if phases > 0:
+    if phases &gt; 0:
         growthPhases = phaseData(phases)
         phaseNumber = 1
         for phase in growthPhases:
-            if 'type' in phase:
-                print("Phase: " + str(phaseNumber) + " Growth: " + str(phase['growthRate']) + "% Length: " + str(phase['length']) + " Type: " + str(phase['type']))
+            if &#x27;type&#x27; in phase:
+                print(&quot;Phase: &quot; + str(phaseNumber) + &quot; Growth: &quot; + str(phase[&#x27;growthRate&#x27;]) + &quot;% Length: &quot; + str(phase[&#x27;length&#x27;]) + &quot; Type: &quot; + str(phase[&#x27;type&#x27;]))
             else:
-                print("Phase: " + str(phaseNumber) + " Growth: " + str(phase['growthRate']) + "% Length: " + str(phase['length']))
+                print(&quot;Phase: &quot; + str(phaseNumber) + &quot; Growth: &quot; + str(phase[&#x27;growthRate&#x27;]) + &quot;% Length: &quot; + str(phase[&#x27;length&#x27;]))
             phaseNumber += 1
     else:
-        print("No growth phases entered.")
+        print(&quot;No growth phases entered.&quot;)
 
     rate = get_rate()
-    print("You entered a discount rate of", rate, "%.")
+    print(&quot;You entered a discount rate of&quot;, rate, &quot;%.&quot;)
 
     totalPV = 0
     totalFV = 0
 
     if phases == 0:
-        if pfVal =='0':
+        if pfVal ==&#x27;0&#x27;:
             totalPV = presentValue(initialValue, rate, periods)
-            print("Total PV = $", round(totalPV, 2))
+            print(&quot;Total PV = $&quot;, round(totalPV, 2))
         else:
             totalFV = futureValue(initialValue, rate, periods)
-            print("Total FV = $", round(totalFV, 2))
+            print(&quot;Total FV = $&quot;, round(totalFV, 2))
 
     else:
 
         i = 0
         for phase in growthPhases:
-            if 'type' in phase and phase['type'] == 'A':
-                phasePV = annuityPV(initialValue, phase['growthRate'], phase['length'])
+            if &#x27;type&#x27; in phase and phase[&#x27;type&#x27;] == &#x27;A&#x27;:
+                phasePV = annuityPV(initialValue, phase[&#x27;growthRate&#x27;], phase[&#x27;length&#x27;])
             else:
-                phasePV = perpetuityPV(initialValue, phase['growthRate'])
+                phasePV = perpetuityPV(initialValue, phase[&#x27;growthRate&#x27;])
 
 
             tempPV = presentValue(phasePV, rate, i * periods)
@@ -200,27 +173,16 @@ def main():
             totalPV += tempPV
             totalFV += tempFV
 
-            initialValue = tempPV if pfVal == '0' else tempFV
+            initialValue = tempPV if pfVal == &#x27;0&#x27; else tempFV
 
             i += 1
 
-        if pfVal == '0':
-            print("Total PV = $", round(totalPV, 2))
+        if pfVal == &#x27;0&#x27;:
+            print(&quot;Total PV = $&quot;, round(totalPV, 2))
 
         else:
-            print("Total FV = $", round(totalFV,2))
-            
-if __name__=="__main__": 
-    main() 
-        </code></pre>
-    </div>
+            print(&quot;Total FV = $&quot;, round(totalFV,2))
 
-    <footer>
-        <p>&copy; 2024 Eshaan Arora</p>
-    </footer>
-
-    <!-- Prism.js for syntax highlighting -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-</body>
-</html>
+if __name__==&quot;__main__&quot;:
+    main()
+</code></pre></article></main><footer class="footer"><div class="container footer-inner"><p>© <span data-year>2026</span> Eshaan Arora</p><nav aria-label="Contact and social links"><a href="mailto:eshaan.arora@utexas.edu">Email</a><a href="https://github.com/eshaanarora99">GitHub</a><a href="https://www.linkedin.com/in/e-arora/">LinkedIn</a><a href="https://earora.substack.com">Substack</a></nav><a href="#main">Back to top ↑</a></div></footer></body></html>

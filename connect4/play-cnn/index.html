@@ -1,68 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Play Connect 4 Challenge Mode | Eshaan Arora</title>
-  <meta name="description" content="Play Connect 4 in Challenge Mode against our high-difficulty CNN-based AI opponent.">
-  <meta property="og:title" content="Play Connect 4 Challenge Mode | Eshaan Arora">
-  <meta property="og:description" content="Connect 4 for Competitive Players">
-  <meta property="og:image" content="/images/headshot.jpeg">
-  <meta property="og:type" content="website">
-  <meta name="color-scheme" content="light dark">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/connect4/assets/connect4.css">
-  <script src="/js/main.js" defer></script>
-  <script src="/connect4/assets/connect4.js" defer></script>
-</head>
-<body data-opponent="cnn">
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <nav class="connect4-nav" aria-label="Connect 4 quick links" data-connect4-sidebar>
-    <button class="connect4-nav-toggle" type="button" data-connect4-nav-toggle aria-expanded="true" aria-controls="connect4-nav-links">
-      Hide Connect 4 Quick Links
-    </button>
-    <div class="connect4-nav-panel">
-      <p class="connect4-nav-title">Explore the Connect 4 World!</p>
-      <div class="connect4-nav-links" id="connect4-nav-links">
-        <a class="button button-secondary" href="/">Back to the Main Portfolio Website</a>
-        <a class="button button-secondary" href="/connect4/">Back to the Game's Homepage</a>
-        <a class="button button-secondary" href="/connect4/training-methodology/">How the Game Works</a>
-        <a class="button button-secondary" href="/connect4/play-transformer/">Play the Game in Casual Mode</a>
-        <a class="button button-secondary" href="/connect4/play-cnn/">Play the Game in Challenge Mode</a>
-        <a class="button button-secondary" href="/connect4/play-policy-gradient/">Play the Game in Insane Mode</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="site-header">
-    <div class="container nav-bar">
-      <a class="logo" href="/index.html">Eshaan Arora</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="/index.html#about">About</a>
-        <a href="/index.html#experience">Experience</a>
-        <a href="/index.html#projects">Projects</a>
-        <a href="/index.html#skills">Skills</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a class="button button-secondary" href="/resume.html">Resume</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
-          <span aria-hidden="true">◐</span>
-          <span data-theme-label>Light</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main" class="section">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect 4 — Challenge mode | Eshaan Arora</title><meta name="description" content="Play Connect 4 using the CNN opponent route."><meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://eshaanarora.com/connect4/play-cnn/"><meta property="og:url" content="https://eshaanarora.com/connect4/play-cnn/"><meta property="og:title" content="Connect 4 — Challenge mode | Eshaan Arora"><meta property="og:description" content="Play Connect 4 using the CNN opponent route."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
+<script src="/js/theme-init.js"></script><link rel="stylesheet" href="/css/styles.css"><script src="/js/main.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Connect 4 \u2014 Challenge mode", "url": "https://eshaanarora.com/connect4/play-cnn/"}</script>
+<link rel="stylesheet" href="/connect4/assets/connect4.css"><script src="/connect4/assets/connect4.js" defer></script></head>
+<body data-opponent="cnn"><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-bar">
+<a class="logo" href="/">Eshaan Arora<span class="logo-dot" aria-hidden="true">.</span></a>
+<nav class="site-nav" aria-label="Primary"><a href="/">Home</a><a href="/about/">About</a><a href="/work/">Work</a><a href="/writing/">Writing</a><a href="/lab/" aria-current="page">Lab</a></nav>
+<div class="header-actions"><a class="resume-link" href="/documents/eshaan-arora-resume.pdf">Résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg></span></a><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button></div>
+</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Lab / Connect 4</p><h1>Challenge mode</h1><p class="lede">The existing CNN opponent route. Choose who goes first, then start a game.</p></section><div class="container"><nav class="game-mode-nav" aria-label="Connect 4 modes"><a href="/connect4/">Playground</a><a href="/connect4/play-transformer/">Casual</a><a href="/connect4/play-cnn/">Challenge</a><a href="/connect4/play-policy-gradient/">Insane</a><a href="/work/connect-4-ai/">Case study</a></nav><p class="small muted">API failure uses random legal moves. Difficulty labels are not verified benchmarks. Match records stay in this browser.</p></div>
     <div class="container">
-      <div class="section-header" data-reveal>
-        <h1 class="section-title">Play Challenge Mode</h1>
-        <p class="section-subtitle">Play a competitive game against our bespoke CNN-based model and keep track of your results.</p>
-      </div>
 
-      
+
+
 
       <div class="connect4-layout">
         <section class="card connect4-panel" aria-label="Game controls">
@@ -114,19 +66,11 @@
 
         <section class="card connect4-board-section" aria-label="Connect 4 board">
           <h2>Board</h2>
-          <div class="connect4-board" id="connect4-board" role="grid" aria-label="Connect 4 board"></div>
+          <div class="connect4-board" id="connect4-board" role="group" aria-label="Connect 4 board"></div>
           <p class="section-subtitle" style="margin-top: var(--space-4);">
             Tip: Click any column to drop your piece. The AI will respond automatically.
           </p>
         </section>
       </div>
     </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Eshaan Arora · <a href="/index.html">Home</a> · <a href="/blog.html">Blog</a></p>
-    </div>
-  </footer>
-</body>
-</html>
+</main><footer class="footer"><div class="container footer-inner"><p>© <span data-year>2026</span> Eshaan Arora</p><nav aria-label="Contact and social links"><a href="mailto:eshaan.arora@utexas.edu">Email</a><a href="https://github.com/eshaanarora99">GitHub</a><a href="https://www.linkedin.com/in/e-arora/">LinkedIn</a><a href="https://earora.substack.com">Substack</a></nav><a href="#main">Back to top ↑</a></div></footer></body></html>

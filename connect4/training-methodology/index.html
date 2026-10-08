@@ -1,116 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How the Game Works | Connect 4 | Eshaan Arora</title>
-  <meta name="description" content="How the Connect 4 AI opponents are designed, trained, and evaluated.">
-  <meta property="og:title" content="How the Game Works | Connect 4 | Eshaan Arora">
-  <meta property="og:description" content="Learn how design and training decisions shape the behavior of the Connect 4 AI opponents.">
-  <meta property="og:image" content="/images/headshot.jpeg">
-  <meta property="og:type" content="website">
-  <meta name="color-scheme" content="light dark">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/connect4/assets/connect4.css">
-  <script src="/js/main.js" defer></script>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Connect 4 Works | Eshaan Arora</title><meta name="description" content="Verified Connect 4 frontend, API behavior, fallback rules, and model documentation limitations."><meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://eshaanarora.com/connect4/training-methodology/"><meta property="og:url" content="https://eshaanarora.com/connect4/training-methodology/"><meta property="og:title" content="How Connect 4 Works | Eshaan Arora"><meta property="og:description" content="Verified Connect 4 frontend, API behavior, fallback rules, and model documentation limitations."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
+<script src="/js/theme-init.js"></script><link rel="stylesheet" href="/css/styles.css"><script src="/js/main.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "How Connect 4 Works", "url": "https://eshaanarora.com/connect4/training-methodology/"}</script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <nav class="connect4-nav" aria-label="Connect 4 quick links" data-connect4-sidebar>
-    <button class="connect4-nav-toggle" type="button" data-connect4-nav-toggle aria-expanded="true" aria-controls="connect4-nav-links">
-      Hide Connect 4 Quick Links
-    </button>
-    <div class="connect4-nav-panel">
-      <p class="connect4-nav-title">Explore the Connect 4 World!</p>
-      <div class="connect4-nav-links" id="connect4-nav-links">
-        <a class="button button-secondary" href="/">Back to the Main Portfolio Website</a>
-        <a class="button button-secondary" href="/connect4/">Back to the Game's Homepage</a>
-        <a class="button button-secondary" href="/connect4/training-methodology/">How the Game Works</a>
-        <a class="button button-secondary" href="/connect4/play-transformer/">Play the Game in Casual Mode</a>
-        <a class="button button-secondary" href="/connect4/play-cnn/">Play the Game in Challenge Mode</a>
-        <a class="button button-secondary" href="/connect4/play-policy-gradient/">Play the Game in Insane Mode</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="site-header">
-    <div class="container nav-bar">
-      <a class="logo" href="/index.html">Eshaan Arora</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="/index.html#about">About</a>
-        <a href="/index.html#experience">Experience</a>
-        <a href="/index.html#projects">Projects</a>
-        <a href="/index.html#skills">Skills</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a class="button button-secondary" href="/resume.html">Resume</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
-          <span aria-hidden="true">◐</span>
-          <span data-theme-label>Light</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main" class="section">
-    <div class="container">
-      <div class="section-header" data-reveal>
-        <h1 class="section-title">How the Game Works</h1>
-        <p class="section-subtitle">
-          An overview of how the Connect 4 AI opponents are designed, trained, and evaluated—and how those decisions show up in gameplay.
-        </p>
-      </div>
-
-      <div class="grid-2">
-        <article class="card reveal" data-reveal>
-          <h2>Data &amp; simulation pipeline</h2>
-          <p>
-            The AI opponents are trained using large-scale self-play simulations that generate diverse game situations.
-            Each board state is encoded into a structured representation, enabling the models to learn both tactical moves
-            and longer-term strategies. This pipeline supports rapid iteration while keeping gameplay behavior consistent
-            across different difficulty modes.
-          </p>
-        </article>
-
-        <article class="card reveal" data-reveal>
-          <h2>Model design &amp; trade-offs</h2>
-          <p>
-            Two modeling approaches power the game. The Casual Mode opponent prioritizes fast responses and consistent play,
-            while the Challenge Mode opponent is designed for deeper strategic reasoning. Both models are trained on the same
-            data and evaluated side by side, making the trade-offs between responsiveness and difficulty visible to players.
-          </p>
-        </article>
-
-        <article class="card reveal" data-reveal>
-          <h2>Evaluation through gameplay</h2>
-          <p>
-            Performance is evaluated through automated match simulations and live games against users.
-            Beyond win rate, evaluation focuses on responsiveness, predictability, and overall player experience—ensuring
-            the AI feels challenging without breaking the flow of play.
-          </p>
-        </article>
-
-        <article class="card reveal" data-reveal>
-          <h2>Future improvements</h2>
-          <p>
-            The current version is production-ready and playable out of the box.
-            You will most certainly enjoy playing against our opponents, just as I have.
-            That said, I plan to continue to iterate this game over time.
-            Planned enhancements include server-side inference optimizations, skill-based difficulty tiers,
-            player rating systems, and tournament-style benchmarking. These additions will make it easier
-            to compare strategies, tune difficulty, and improve long-term replayability.
-          </p>
-        </article>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Eshaan Arora · <a href="/index.html">Home</a> · <a href="/blog.html">Blog</a></p>
-    </div>
-  </footer>
-</body>
-</html>
+<body ><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-bar">
+<a class="logo" href="/">Eshaan Arora<span class="logo-dot" aria-hidden="true">.</span></a>
+<nav class="site-nav" aria-label="Primary"><a href="/">Home</a><a href="/about/">About</a><a href="/work/">Work</a><a href="/writing/">Writing</a><a href="/lab/" aria-current="page">Lab</a></nav>
+<div class="header-actions"><a class="resume-link" href="/documents/eshaan-arora-resume.pdf">Résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg></span></a><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button></div>
+</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Lab / Connect 4 interface notes</p><h1>What the code tells us.</h1><p class="lede">A concise account of the verified frontend implementation and the evidence still needed for the models.</p></section><article class="container reading prose"><h2>Browser and API</h2>
+<p>The browser enforces gravity and checks four-in-a-row in both diagonal directions, horizontally, and vertically. It sends numeric boards to a separate inference service with identifiers <code>transformer</code>, <code>cnn</code>, or <code>pg</code>. The API returns a column.</p>
+<h2>Three routes, not a measured ranking</h2>
+<p>Casual, Challenge, and Insane are existing mode labels. The previous explainer described two models, but the interface has three routes. This repository does not contain architecture code, training data, checkpoints, or evaluation logs.</p>
+<h2>Fallbacks and state</h2>
+<p>A failed move request falls back to a random legal column. An invalid returned column falls back to the first legal column. Local storage keeps per-opponent and combined results. These records do not distinguish inferred and fallback moves and cannot be used as model benchmarks.</p>
+<h2>Training and evaluation</h2>
+<p>The prior self-play and evaluation narrative could not be verified from source. Training details are pending backend documentation. The case study records the evidence gaps and a possible reproducible comparison protocol.</p>
+<p><a href="/work/connect-4-ai/">Read the case study</a> · <a href="/connect4/">Choose a game mode</a></p></article></main><footer class="footer"><div class="container footer-inner"><p>© <span data-year>2026</span> Eshaan Arora</p><nav aria-label="Contact and social links"><a href="mailto:eshaan.arora@utexas.edu">Email</a><a href="https://github.com/eshaanarora99">GitHub</a><a href="https://www.linkedin.com/in/e-arora/">LinkedIn</a><a href="https://earora.substack.com">Substack</a></nav><a href="#main">Back to top ↑</a></div></footer></body></html>

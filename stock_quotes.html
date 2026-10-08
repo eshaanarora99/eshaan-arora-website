@@ -1,82 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yahoo Finance Data Fetcher - Eshaan Arora</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        header {
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        pre {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 8px;
-            overflow-x: auto;
-        }
-        h2 {
-            text-align: center; /* Center the heading */
-        }
-    </style>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quote Fetcher — Archived Python | Eshaan Arora</title><meta name="description" content="Preserved local Python source for reference; not an interactive browser application."><meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://eshaanarora.com/stock_quotes.html"><meta property="og:url" content="https://eshaanarora.com/stock_quotes.html"><meta property="og:title" content="Quote Fetcher — Archived Python | Eshaan Arora"><meta property="og:description" content="Preserved local Python source for reference; not an interactive browser application."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
+<script src="/js/theme-init.js"></script><link rel="stylesheet" href="/css/styles.css"><script src="/js/main.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Quote Fetcher \u2014 Archived Python", "url": "https://eshaanarora.com/stock_quotes.html"}</script>
 </head>
-<body>
-
-    <header>
-        <h1>Yahoo Finance Data Fetcher</h1>
-    </header>
-
-    <div class="container">
-        <h2>Code for Yahoo Finance Data Fetcher</h2>
-        <pre><code class="language-python">
-import requests
+<body ><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-bar">
+<a class="logo" href="/">Eshaan Arora<span class="logo-dot" aria-hidden="true">.</span></a>
+<nav class="site-nav" aria-label="Primary"><a href="/">Home</a><a href="/about/">About</a><a href="/work/">Work</a><a href="/writing/">Writing</a><a href="/lab/" aria-current="page">Lab</a></nav>
+<div class="header-actions"><a class="resume-link" href="/documents/eshaan-arora-resume.pdf">Résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg></span></a><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button></div>
+</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Lab / Archived source</p><h1>Quote Fetcher — Archived Python</h1><p class="lede">The original local Python program, preserved for reference. This page does not execute the program.</p></section><article class="container reading prose"><p class="notice">Archived source, not a live application. Dependencies and local configuration are required; this program has not been newly validated. The original PV/FV multiphase logic needs a formula review.</p><p><a href="/content/sources/stock-quotes.py" download>Download Python source</a> · <a href="/lab/financial-tools/">Browser financial tools</a></p><pre tabindex="0" aria-label="Code sample"><code class="language-python">import requests
 from datetime import datetime
 
 # Your RapidAPI Key
-API_KEY = 'Your_Key_Here'
+API_KEY = &#x27;Your_Key_Here&#x27;
 
 # Function to fetch real-time data from Yahoo Finance via RapidAPI
 def get_yahoo_finance_data(symbol):
-    url = f"https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-quotes?symbols={symbol}&region=US"
+    url = f&quot;https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-quotes?symbols={symbol}®ion=US&quot;
     headers = {
-        "X-RapidAPI-Key": API_KEY,
-        "X-RapidAPI-Host": "apidojo-yahoo-finance-v1.p.rapidapi.com"
+        &quot;X-RapidAPI-Key&quot;: API_KEY,
+        &quot;X-RapidAPI-Host&quot;: &quot;apidojo-yahoo-finance-v1.p.rapidapi.com&quot;
     }
     response = requests.get(url, headers=headers)
     data = response.json()
-    
+
     # Check if the symbol was found and return the quote
-    if "quoteResponse" in data and len(data["quoteResponse"]["result"]) > 0:
-        return data["quoteResponse"]["result"][0]
+    if &quot;quoteResponse&quot; in data and len(data[&quot;quoteResponse&quot;][&quot;result&quot;]) &gt; 0:
+        return data[&quot;quoteResponse&quot;][&quot;result&quot;][0]
     else:
         return None
 
 # Function to print stock/index data
 def print_yahoo_finance_data(symbol, data):
     if data:
-        print(f"{symbol} Data:")
-        print(f"Price: ${data['regularMarketPrice']}")
-        print(f"Previous Close: ${data['regularMarketPreviousClose']}")
-        print(f"Change: {data['regularMarketChange']} ({data['regularMarketChangePercent']}%)")
-        print(f"Volume: {data['regularMarketVolume']}\n")
+        print(f&quot;{symbol} Data:&quot;)
+        print(f&quot;Price: ${data[&#x27;regularMarketPrice&#x27;]}&quot;)
+        print(f&quot;Previous Close: ${data[&#x27;regularMarketPreviousClose&#x27;]}&quot;)
+        print(f&quot;Change: {data[&#x27;regularMarketChange&#x27;]} ({data[&#x27;regularMarketChangePercent&#x27;]}%)&quot;)
+        print(f&quot;Volume: {data[&#x27;regularMarketVolume&#x27;]}\n&quot;)
     else:
-        print(f"No data found for {symbol}.\n")
+        print(f&quot;No data found for {symbol}.\n&quot;)
 
 # Fetch and print data for multiple symbols
 def fetch_and_print_data():
-    print(f"Fetching data at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ET\n")
-    
+    print(f&quot;Fetching data at {datetime.now().strftime(&#x27;%Y-%m-%d %H:%M:%S&#x27;)} ET\n&quot;)
+
     # List of symbols to fetch
-    symbols = ['^DJI', '^GSPC', '^IXIC', '^VIX', 'GC=F', 'CL=F', 'BTC-USD', '^TNX']
-    
+    symbols = [&#x27;^DJI&#x27;, &#x27;^GSPC&#x27;, &#x27;^IXIC&#x27;, &#x27;^VIX&#x27;, &#x27;GC=F&#x27;, &#x27;CL=F&#x27;, &#x27;BTC-USD&#x27;, &#x27;^TNX&#x27;]
+
     # Fetch and print data for each symbol
     for symbol in symbols:
         data = get_yahoo_finance_data(symbol)
@@ -85,29 +58,18 @@ def fetch_and_print_data():
 # Call the function to fetch and print data when the script is run
 
 print(
-    """
+    &quot;&quot;&quot;
     Symbol Definitions:
     -------------------
     Dow Jones Industrial Average:  ^DJI
-    S&P 500 Index:                 ^GSPC
+    S&amp;P 500 Index:                 ^GSPC
     NASDAQ Composite Index:        ^IXIC
     Volatility Index (VIX):        ^VIX
     Gold Futures:                  GC=F
     WTI Crude Oil Futures:         CL=F
     Bitcoin (BTC) to USD:          BTC-USD
     10-Year Treasury Yield:        ^TNX
-    """
+    &quot;&quot;&quot;
 )
 fetch_and_print_data()
-        </code></pre>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Eshaan Arora</p>
-    </footer>
-
-    <!-- Prism.js for syntax highlighting -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-</body>
-</html>
+</code></pre></article></main><footer class="footer"><div class="container footer-inner"><p>© <span data-year>2026</span> Eshaan Arora</p><nav aria-label="Contact and social links"><a href="mailto:eshaan.arora@utexas.edu">Email</a><a href="https://github.com/eshaanarora99">GitHub</a><a href="https://www.linkedin.com/in/e-arora/">LinkedIn</a><a href="https://earora.substack.com">Substack</a></nav><a href="#main">Back to top ↑</a></div></footer></body></html>
