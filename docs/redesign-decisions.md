@@ -8,9 +8,9 @@ This adds a reproducible authoring step to the former hand-edited site. It avoid
 
 ## Information architecture
 
-Home introduces current work, a compact snapshot, four featured case-study entries (Connect 4, financial AI draft, Disney, and Michelin), Connect 4, two selected writing entries, and contact. About expands the background, education, credentials, and a timeline without invented dates or job titles. Work curates seven substantial or shorter project pages. Writing groups two source-linked document overviews and an external essay into three categories. Lab distinguishes browser tools, a playable interface, and archived local programs.
+Home introduces current work, a compact snapshot, four featured case-study entries (Connect 4, financial AI, Disney, and Michelin), Connect 4, two selected writing entries, and contact. About expands the background, education, credentials, and a timeline without invented dates or job titles. Work curates six substantial or shorter project pages, with an additional unlisted Texas write-up route. Writing groups two source-linked document overviews and an external essay into three categories. Lab distinguishes browser tools, a playable interface, and archived local programs.
 
-The SS&C and Texas case studies are explicitly marked drafts. Their presence is a place for evidence and review, not a claim of verified performance. Professional positioning uses the owner's provided Uber background and credentials. No confidential Uber work, invented quantitative impact, employer-specific responsibilities, or job dates were added.
+The financial AI case study uses the recovered owner-authored Product Manager’s Note for a high-level account of the work. Performance figures remain withheld. Texas retains a brief coming-soon route outside the curated index and sitemap until original source material is supplied. Professional positioning uses the owner's provided Uber background and credentials. No confidential Uber work, invented quantitative impact, employer-specific responsibilities, or job dates were added.
 
 ## Design
 

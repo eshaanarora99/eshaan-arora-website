@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spotify Listening History | Eshaan Arora</title><meta name="description" content="A local Python workflow for exploring listening patterns, artists, tracks, and approximate streaming locations."><meta name="color-scheme" content="light dark">
-<link rel="canonical" href="https://eshaanarora.com/work/spotify-analysis/"><meta property="og:url" content="https://eshaanarora.com/work/spotify-analysis/"><meta property="og:title" content="Spotify Listening History | Eshaan Arora"><meta property="og:description" content="A local Python workflow for exploring listening patterns, artists, tracks, and approximate streaming locations."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
+<title>Spotify Listening History | Eshaan Arora</title><meta name="description" content="Turning a Spotify data export into a closer look at listening habits, favorite artists, and patterns over time."><meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://eshaanarora.com/work/spotify-analysis/"><meta property="og:url" content="https://eshaanarora.com/work/spotify-analysis/"><meta property="og:title" content="Spotify Listening History | Eshaan Arora"><meta property="og:description" content="Turning a Spotify data export into a closer look at listening habits, favorite artists, and patterns over time."><meta property="og:type" content="website"><meta property="og:image" content="https://eshaanarora.com/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
 <script src="/js/theme-init.js"></script><link rel="stylesheet" href="/css/styles.css"><script src="/js/main.js" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Spotify Listening History", "url": "https://eshaanarora.com/work/spotify-analysis/"}</script>
 </head>
@@ -10,18 +10,18 @@
 <a class="logo" href="/">Eshaan Arora<span class="logo-dot" aria-hidden="true">.</span></a>
 <nav class="site-nav" aria-label="Primary"><a href="/">Home</a><a href="/about/">About</a><a href="/work/" aria-current="page">Work</a><a href="/writing/">Writing</a><a href="/lab/">Lab</a></nav>
 <div class="header-actions"><a class="resume-link" href="/documents/eshaan-arora-resume.pdf">Résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg></span></a><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button></div>
-</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Data · Independent exploration</p><h1>Spotify Listening History</h1><p class="lede">A local Python workflow for exploring listening patterns, artists, tracks, and approximate streaming locations.</p></section><div class="container case-layout"><aside class="case-meta"><p class="eyebrow">Project details</p><p class="status">Source available</p><p>Python · pandas · Matplotlib · Folium</p><nav aria-label="Case study sections"><a href="#section-0">Overview and question</a><a href="#section-1">My contribution</a><a href="#section-2">Tools and implementation</a><a href="#section-3">Results</a><a href="#section-4">Limitations</a><a href="#section-5">Resources</a></nav><a class="text-link" href="/work/">← All work</a></aside><article class="prose case-body"><h2 id="section-0">Overview and question</h2>
-<p>What can an extended Spotify listening-history export reveal about listening patterns? The existing program combines JSON exports, summarizes play time, and produces plots and maps on a local machine.</p>
-<h2 id="section-1">My contribution</h2>
-<p>The website contains a Python implementation linked to the Spotify Data Analysis repository. The code aggregates listening records and defines statistics, time-series plots, artist and track summaries, and GeoIP map generation.</p>
-<h2 id="section-2">Tools and implementation</h2>
-<p>pandas handles tabular data, Matplotlib produces monthly activity and ranking plots, and GeoIP2 with Folium generates full and clustered maps. Inputs are Spotify's extended streaming-history JSON files and a separately obtained GeoLite2 database. The original script contains machine-specific paths that must be adjusted.</p>
-<h2 id="section-3">Results</h2>
-<p>The source implements the analyses, but no exported results or dataset are included in this website checkout. No personal listening statistics are inferred or published.</p>
-<h2 id="section-4">Limitations</h2>
-<p>Play time is different from preference or attention. IP geolocation is approximate, and an export can contain sensitive location and listening information. Missing fields and empty inputs need validation before general use. This is a local program, not a deployed browser explorer.</p>
-<h2 id="section-5">Resources</h2>
+</div></header><main id="main" tabindex="-1"><section class="page-intro container"><p class="eyebrow">Data · Independent exploration</p><h1>Spotify Listening History</h1><p class="lede">Turning a Spotify data export into a closer look at listening habits, favorite artists, and patterns over time.</p></section><div class="container case-layout"><aside class="case-meta"><p class="eyebrow">Project details</p><p class="status">Python project</p><p>Python · pandas · Matplotlib · Folium</p><nav aria-label="Case study sections"><a href="#section-0">A closer look at listening habits</a><a href="#section-1">What the program does</a><a href="#section-2">Tools and approach</a><a href="#section-3">What to keep in mind</a><a href="#section-4">Explore the project</a></nav><a class="text-link" href="/work/">← All work</a></aside><article class="prose case-body"><h2 id="section-0">A closer look at listening habits</h2>
+<p>Spotify's extended listening history contains more than a list of songs. It records when a track played, how long it played, and the platform used. I built a Python program to bring those records together and explore what changes over time.</p>
+<h2 id="section-1">What the program does</h2>
+<p>The program combines JSON exports into a single dataset and calculates total listening time, most-played artists and tracks, and platform usage. It also produces monthly activity charts and ranked artist and track plots.</p>
+<p>An optional mapping step uses IP geolocation to create full and clustered maps of approximate streaming locations.</p>
+<h2 id="section-2">Tools and approach</h2>
+<p>pandas handles the data preparation and summaries. Matplotlib turns the results into charts. GeoIP2 and Folium support the optional location analysis and maps.</p>
+<p>The program runs locally with a Spotify extended streaming-history export. The mapping step also needs a GeoLite2 database. File paths in the script should be adjusted to match your setup.</p>
+<h2 id="section-3">What to keep in mind</h2>
+<p>Minutes played can reveal patterns, but they are not a complete measure of taste or attention. IP-based locations are approximate, and listening exports can contain sensitive personal information. Keeping the analysis on your own machine gives you control over the underlying data.</p>
+<h2 id="section-4">Explore the project</h2>
 <ul>
-<li><a href="/lab/spotify-source/">View preserved Python source</a></li>
-<li><a href="https://github.com/eshaanarora99/Spotify_Data_Analysis">Original repository</a></li>
+<li><a href="/lab/spotify-source/">Read or download the Python program</a></li>
+<li><a href="https://github.com/eshaanarora99/Spotify_Data_Analysis">View the project on GitHub</a></li>
 </ul></article></div></main><footer class="footer"><div class="container footer-inner"><p>© <span data-year>2026</span> Eshaan Arora</p><nav aria-label="Contact and social links"><a href="mailto:eshaan.arora@utexas.edu">Email</a><a href="https://github.com/eshaanarora99">GitHub</a><a href="https://www.linkedin.com/in/e-arora/">LinkedIn</a><a href="https://earora.substack.com">Substack</a></nav><a href="#main">Back to top ↑</a></div></footer></body></html>

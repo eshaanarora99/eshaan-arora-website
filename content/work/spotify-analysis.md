@@ -1,27 +1,27 @@
 ---
-{"title":"Spotify Listening History","slug":"spotify-analysis","category":"Data · Independent exploration","description":"A local Python workflow for exploring listening patterns, artists, tracks, and approximate streaming locations.","tools":["Python","pandas","Matplotlib","Folium"],"status":"Source available"}
+{"title":"Spotify Listening History","slug":"spotify-analysis","category":"Data · Independent exploration","description":"Turning a Spotify data export into a closer look at listening habits, favorite artists, and patterns over time.","tools":["Python","pandas","Matplotlib","Folium"],"status":"Python project"}
 ---
-## Overview and question
+## A closer look at listening habits
 
-What can an extended Spotify listening-history export reveal about listening patterns? The existing program combines JSON exports, summarizes play time, and produces plots and maps on a local machine.
+Spotify's extended listening history contains more than a list of songs. It records when a track played, how long it played, and the platform used. I built a Python program to bring those records together and explore what changes over time.
 
-## My contribution
+## What the program does
 
-The website contains a Python implementation linked to the Spotify Data Analysis repository. The code aggregates listening records and defines statistics, time-series plots, artist and track summaries, and GeoIP map generation.
+The program combines JSON exports into a single dataset and calculates total listening time, most-played artists and tracks, and platform usage. It also produces monthly activity charts and ranked artist and track plots.
 
-## Tools and implementation
+An optional mapping step uses IP geolocation to create full and clustered maps of approximate streaming locations.
 
-pandas handles tabular data, Matplotlib produces monthly activity and ranking plots, and GeoIP2 with Folium generates full and clustered maps. Inputs are Spotify's extended streaming-history JSON files and a separately obtained GeoLite2 database. The original script contains machine-specific paths that must be adjusted.
+## Tools and approach
 
-## Results
+pandas handles the data preparation and summaries. Matplotlib turns the results into charts. GeoIP2 and Folium support the optional location analysis and maps.
 
-The source implements the analyses, but no exported results or dataset are included in this website checkout. No personal listening statistics are inferred or published.
+The program runs locally with a Spotify extended streaming-history export. The mapping step also needs a GeoLite2 database. File paths in the script should be adjusted to match your setup.
 
-## Limitations
+## What to keep in mind
 
-Play time is different from preference or attention. IP geolocation is approximate, and an export can contain sensitive location and listening information. Missing fields and empty inputs need validation before general use. This is a local program, not a deployed browser explorer.
+Minutes played can reveal patterns, but they are not a complete measure of taste or attention. IP-based locations are approximate, and listening exports can contain sensitive personal information. Keeping the analysis on your own machine gives you control over the underlying data.
 
-## Resources
+## Explore the project
 
-- [View preserved Python source](/lab/spotify-source/)
-- [Original repository](https://github.com/eshaanarora99/Spotify_Data_Analysis)
+- [Read or download the Python program](/lab/spotify-source/)
+- [View the project on GitHub](https://github.com/eshaanarora99/Spotify_Data_Analysis)

@@ -1,58 +1,50 @@
 ---
-{"title":"Connect 4 AI","slug":"connect-4-ai","category":"AI · Interactive systems","description":"A playable experiment in model-backed decision making, with three opponent routes and a lightweight browser interface.","tools":["JavaScript","HTTP API","Static hosting"],"image":"/assets/connect4-board.svg","image_alt":"Illustration of a six-row, seven-column Connect 4 board","featured":true,"status":"Playable interface"}
+{"title":"Connect 4 AI","slug":"connect-4-ai","category":"AI · Interactive systems","description":"The classic game, with three AI opponents to play against and compare.","tools":["JavaScript","Machine learning","Web development"],"image":"/assets/connect4-board.svg","image_alt":"Illustration of a six-row, seven-column Connect 4 board","featured":true,"status":"Play now"}
 ---
-## Overview
+## A familiar game, different opponents
 
-Connect 4 makes a useful interface for exploring sequential decisions: the rules are simple, the board is small, and a move can change the direction of a game. This project pairs a browser game with a separately hosted inference API.
+Connect 4 has simple rules and plenty of room for strategy. One move can block a threat, set a trap, or open a path to victory. That makes it an appealing setting for exploring how different approaches to machine learning show up in a game you can actually play.
+
+I built this project to bring those ideas into the browser. Choose an opponent, decide who goes first, and try to connect four before the AI does.
 
 [Play Connect 4 →](/connect4/)
 
-## Problem
+## What I built
 
-Give players a clear way to try different AI opponents without installing software. The interface needs to communicate whose turn it is, enforce legal moves, and keep a game usable when the inference service is unavailable.
+The game combines an interactive board with AI opponents served from a separate backend. I built the browser experience around clear turn-by-turn feedback: choosing the first move, dropping pieces, seeing the result, and starting another match.
 
-## My contribution
+Wins, losses, and draws are saved in your browser, both for each opponent and across all modes. You can reset a board or resign at any point.
 
-The public website presents this as a personal project. The implementation available here covers the browser board, controls, API integration, game results, and persistent match records. Model authorship and training details require the separate backend source before a more specific account can be published.
+## Three ways to play
 
-## Tools and methodology
+| Mode | Opponent |
+| --- | --- |
+| [Casual](/connect4/play-transformer/) | Transformer |
+| [Challenge](/connect4/play-cnn/) | Convolutional neural network (CNN) |
+| [Insane](/connect4/play-policy-gradient/) | Policy gradient |
 
-The frontend uses vanilla JavaScript. A six-by-seven board holds empty cells, user pieces, and opponent pieces. Requests convert these to numeric values: 0 is empty; 1 and 2 identify the first and second players, respectively.
+The models give the project three different approaches to move selection. CNNs are commonly used to recognize spatial patterns, transformers model relationships across an input, and policy-gradient methods learn how to choose actions. Here, the shared board and rules provide a way to explore those approaches through play.
 
-| Mode | API model identifier | Existing model description |
-| --- | --- | --- |
-| Casual | `transformer` | Transformer |
-| Challenge | `cnn` | Convolutional neural network |
-| Insane | `pg` | Policy gradient |
+## How it works
 
-These names describe the existing interface and API contract. They are not verified rankings of difficulty. Architectures, layer counts, training objectives, and checkpoints are absent from this repository.
+The browser handles the rules: pieces fall to the lowest available space, and four connected pieces win horizontally, vertically, or diagonally. After your move, it sends the current board to the selected opponent and places the returned move.
 
-## Implementation and deployment
+![A move travels from the browser board to the AI service and back](/assets/connect4-flow.svg)
 
-The static browser client sends the board and opponent identifier to a separate service. Move inference runs outside the website deployment.
+The board is represented as a six-by-seven grid. Keeping the game interface separate from model inference lets the website stay lightweight while the backend handles the opponent's decisions.
 
-![Verified request flow: browser board, move request, separate API, returned column](/assets/connect4-flow.svg)
+## Design trade-offs
 
-```json
-{"modelType":"cnn","board":[[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,1,0,0,0]]}
-```
+A game is a practical test of an AI interface. The player needs to know when to act, when the opponent is thinking, and when a match is over. Responsiveness and clear feedback matter alongside the model's choices.
 
-`POST /connect4-api/move` returns `best_move`. The client checks the returned column and applies gravity. It detects horizontal, vertical, and diagonal wins and full-board draws. Players can choose the first move, reset, or resign. Match records are stored in the browser, separately for each opponent and in total.
+Hosting inference separately also makes the game dependent on a network connection. If the AI service is unavailable, the game uses random legal moves so a match can continue. Those moves are a fallback, not the selected model's decisions.
 
-## Training methodology and evaluation
+## What I’d explore next
 
-**Documentation pending.** The old methodology page referred to large-scale self-play and automated matches, but no code, training logs, dataset, or results support those details in this checkout. It also described two modeling approaches despite the three available routes.
+A useful next step would be a controlled comparison of the opponents: alternating the first player, using consistent match conditions, and separating model moves from fallback moves. Clearer connection feedback and faster responses would also improve the playing experience.
 
-Frontend tests can verify routing, encoding, controls, and game behavior. They cannot establish model strength. A reproducible model comparison would need fixed checkpoints, seeded matches, alternate starting players, a defined opponent baseline, and a record of service failures. No model win rate or latency benchmark is published here.
+## Try it yourself
 
-## Trade-offs and limitations
-
-Separating inference keeps the site small and avoids distributing model files, while introducing a dependency on API availability and cross-origin access. On request failure, the existing client selects a random legal move. An invalid returned column falls back to the first legal column. A completed game therefore does not prove that a model answered every request.
-
-The redesign preserves the game script and its algorithms. Known follow-ups include request cancellation during reset, a bounded request timeout, richer keyboard board announcements, and clearer per-move fallback reporting. These are future improvements, not completed features.
-
-## Resources
-
-- [Play all three modes](/connect4/)
-- [Frontend implementation on GitHub](https://github.com/eshaanarora99/eshaan-arora-website/blob/main/connect4/assets/connect4.js)
-- [Verified interface notes](/connect4/training-methodology/)
+- [Choose an opponent and play](/connect4/)
+- [How to play and what the modes mean](/connect4/training-methodology/)
+- [Explore the game code on GitHub](https://github.com/eshaanarora99/eshaan-arora-website/blob/main/connect4/assets/connect4.js)

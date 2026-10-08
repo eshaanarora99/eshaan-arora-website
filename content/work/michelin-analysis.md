@@ -1,26 +1,28 @@
 ---
-{"title":"Michelin Star Potential","slug":"michelin-analysis","category":"Text analytics · Research","description":"A team analysis of restaurant reviews using topic modeling, sentiment, and text similarity.","tools":["LDA","Sentiment analysis","Text similarity"],"featured":true,"image":"/assets/michelin-presentation.png","image_alt":"Original title slide of the team’s Michelin restaurant analysis presentation","status":"Presentation available"}
+{"title":"Michelin Star Potential","slug":"michelin-analysis","category":"Text analytics · Research","description":"What can thousands of restaurant reviews tell us about a Michelin-worthy dining experience?","tools":["LDA","Sentiment analysis","Text similarity"],"featured":true,"image":"/assets/michelin-presentation.png","image_alt":"Title slide of the team’s Michelin restaurant analysis presentation","status":"Team research"}
 ---
-## Overview and research question
+## Looking for the secret sauce
 
-The team's presentation, “The Secret Sauce to Stardom,” asks what restaurant reviews can reveal about Michelin-recognized restaurants and possible candidates in Austin.
+Our team asked what the language of restaurant reviews could reveal about Michelin-recognized restaurants—and which Austin restaurants shared those characteristics. The project became **“The Secret Sauce to Stardom,”** a text analysis of **78,838 user-generated reviews** across Michelin, non-Michelin, and Austin restaurants.
 
 ## My contribution
 
-The slides credit Eshaan Arora, Samuel Chen, Shaunak Divine, Ashley Hattendorf, Maggie Kleman, and Grayson Merritt. They do not specify each person's contribution; this is presented as team work.
+I worked on this team project with Samuel Chen, Shaunak Divine, Ashley Hattendorf, Maggie Kleman, and Grayson Merritt. Together, we used customer reviews to explore the qualities people describe when they write about a dining experience.
 
-## Dataset and methodology
+## Methods
 
-The presentation describes **78,838 user-generated reviews** spanning Michelin, non-Michelin, and Austin restaurants. It lists LDA topic modeling, sentiment analysis, and text similarity. These methods explore patterns in customer language; customer reviews are not the same as Michelin inspectors' assessments.
+We combined topic modeling with Latent Dirichlet Allocation (LDA), sentiment analysis, text similarity, and recurring two- and three-word phrases. Each offered a different view: the themes customers discuss, how they describe an experience, and which language appears across restaurant groups.
 
-## Implementation and findings
+## What the reviews revealed
 
-The preserved slides contain the team's comparisons and discussion. Runnable analysis code and a held-out prediction benchmark are not included in this checkout. No predictive accuracy or claim of identifying future award winners is made here.
+The presentation highlights phrases such as “tasting menu” and “wine pairing” in Michelin restaurant reviews, compared with “happy hour” and “no wait” in non-Michelin reviews. It also examines references to chef personality, service, and the overall experience.
 
-## Limitations and lessons
+These comparisons informed a set of potential Austin candidates and questions for further research, including how review language might change after a restaurant receives a star.
 
-Review selection, geography, price, cuisine, and platform biases can affect comparisons. Similarity does not establish award potential, and award decisions are not determined by review text alone.
+## Limits of the analysis
 
-## Resources
+Customer reviews reflect diners' experiences, not Michelin inspectors' criteria. Price, cuisine, geography, and review-platform habits can shape the language we observe. The project is an exploratory comparison, rather than a guarantee of future awards.
 
-[Read the original team presentation (PDF)](/documents/Unstructured-Group-Project.pdf).
+## Read the presentation
+
+[The Secret Sauce to Stardom — team presentation (PDF)](/documents/Unstructured-Group-Project.pdf).

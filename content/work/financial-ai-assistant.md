@@ -1,42 +1,34 @@
 ---
-{"title":"SS&C Financial AI Assistant","slug":"financial-ai-assistant","category":"Applied AI · Financial workflows","description":"A team capstone exploring retrieval-augmented answers for financial risk questions. A documented overview with evaluation details still under review.","tools":["RAG","Chroma DB","Reciprocal rank fusion"],"image":"/assets/retrieval-flow.svg","image_alt":"Conceptual retrieval flow from question to documents to grounded answer","featured":true,"status":"Case study draft"}
+{"title":"SS&C Financial AI Assistant","slug":"financial-ai-assistant","category":"Applied AI · Financial workflows","description":"A team capstone bringing conversational search to financial risk information.","tools":["RAG","Chroma DB","Reciprocal rank fusion"],"image":"/assets/retrieval-flow.svg","image_alt":"A question is used to retrieve relevant documents and generate an answer","featured":true,"status":"Team project"}
 ---
-## Overview
+## From scattered information to a conversation
 
-A team capstone explored a conversational interface for financial risk information. The existing project page calls it the Financial Risk Insight Engine. This overview preserves the technical outline while leaving unsupported results and sensitive details for review.
-
-**Draft:** employer naming, permission to share artifacts, individual contributions, and evaluation evidence need confirmation before publication.
-
-## Problem
-
-Financial risk information can be difficult to navigate when it is spread across documents and metadata. The project explored whether retrieval-augmented generation could help people locate relevant material and read an answer tied to that material.
+Financial risk analysis often starts with a search: finding the right information across documents, metadata, and lists of risk factors. Our capstone, the Financial Risk Insight Engine, explored a conversational alternative. The goal was to help users ask a question, find relevant material, and read a useful summary in one place.
 
 ## My contribution
 
-This was a team project with Eshaan Arora, Soham Bidyadhar, Albert Nguyen, Kimberly Simmonds, and Isha Verma, as credited in the original page. The existing narrative describes product and retrieval architecture work, but an individual contribution breakdown remains to be confirmed.
+I worked on the product and retrieval design, including the move from in-memory storage to Chroma DB and iterations on the answer workflow. A central concern was how to make the system useful without letting a plausible-sounding answer drift beyond the information available to it.
 
-## Architecture and retrieval methodology
+This was a team effort with Soham Bidyadhar, Albert Nguyen, Kimberly Simmonds, and Isha Verma.
 
-The original account describes a move from in-memory storage to Chroma DB, semantic retrieval, reranking, reciprocal rank fusion, and chat history. These are descriptions from the project narrative; runnable implementation is not included here.
+## The challenge
 
-![Conceptual RAG workflow; not a verified deployment diagram](/assets/retrieval-flow.svg)
+The project had to address two connected problems: inconsistent source information and answers that could introduce risk factors outside the source material. A conversational interface alone would not solve either. The information behind it needed to be organized, and the answer needed to stay connected to that information.
 
-A useful evaluation would separately test retrieval relevance, source support, answer correctness, and behavior when the knowledge base contains no answer. Conversation context should not substitute for evidence in retrieved documents.
+## How the system works
 
-## Implementation details
+The project used retrieval-augmented generation (RAG): retrieve relevant information first, then use it to support the answer. Chroma DB provided semantic search over the knowledge base. Reranking and reciprocal rank fusion helped order candidate results, while chat history supported follow-up questions.
 
-**Owner review needed:** add a sanitized diagram, explain chunking and embedding choices, document how reciprocal rank fusion was applied, and distinguish prototype behavior from deployed functionality. No confidential source documents, internal risk factors, or operational data are reproduced in this overview.
+![An overview of the question, retrieval, and answer workflow](/assets/retrieval-flow.svg)
 
-## Evaluation and results
+The product work focused on how these pieces fit together for a user asking a financial risk question. Retrieval quality, conversation context, and the clarity of the resulting summary all mattered.
 
-The original page reported an accuracy figure without a question set, scoring rubric, sample size, or reproducible evaluation. That number is intentionally withheld. No verified business impact or production-use claim is made here.
+## The resulting workflow
 
-**Evidence needed:** evaluation definition, anonymized examples, failure analysis, and permission to publish results.
+The prototype brought conversational questions, document retrieval, and human-readable summaries into a single workflow. It explored how an AI assistant could help users navigate risk information and investigate questions without relying solely on manual searches.
 
-## Limitations and lessons
+## Lessons and limitations
 
-Retrieval can return plausible but irrelevant material, and a language model can produce answers that exceed its sources. Reranking and fusion can improve candidate ordering, but neither establishes factual correctness by itself. The case study needs evidence about those failure modes before stronger conclusions are warranted.
+Relevant retrieval is only part of a reliable answer. A system also needs to recognize when the source material is incomplete and avoid filling those gaps with invented details. Reranking can improve the ordering of results, but it does not guarantee that a generated answer is correct.
 
-## Resources
-
-The original note and presentation remain at their existing document paths. They are not newly promoted here pending confidentiality review. Source code and a public demo have not been provided.
+The project reinforced the importance of evaluating both the information retrieved and the answer built from it. A useful assistant needs to make its sources and limits understandable to the person using it.
