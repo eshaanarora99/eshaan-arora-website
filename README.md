@@ -1,6 +1,6 @@
 # Eshaan Arora — Operations, Analytics, and AI
 
-A static personal website balancing professional background, technical work, writing, and independent experiments. Live reference: https://eshaanarora.com. Existing hosting: Vercel; the redesign has not been deployed to production.
+A static personal website balancing professional background, technical work, writing, and independent experiments. Live reference: https://eshaanarora.com. Existing hosting: Vercel. `package.json` pins the hosting build environment to Node.js 24.x without adding dependencies; the website remains static.
 
 ## Site structure
 

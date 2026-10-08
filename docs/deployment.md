@@ -4,6 +4,12 @@
 
 No production deployment, main-branch push, production configuration overwrite, or hosting migration was performed. Generated HTML is available for review on a local redesign branch. The branch has not been pushed, so no automatic hosting preview is triggered by this task. Existing README identifies Vercel hosting, but actual dashboard settings and auto-deployment behavior need owner confirmation.
 
+## Hosting Node.js version
+
+The first redesign preview failed because the Vercel project selected discontinued Node.js 20.x. `package.json` now pins `engines.node` to `24.x`, which Vercel documents as overriding the dashboard version on the next deployment. The manifest has no dependencies or build script; the site remains checked-in static HTML. The dashboard can also be aligned to 24.x when account access is available.
+
+Reference: https://vercel.com/docs/functions/runtimes/node-js/node-js-versions
+
 ## Local authoring
 
 ```sh
